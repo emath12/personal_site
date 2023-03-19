@@ -14,8 +14,8 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
 }
 
 .left-title-content {
@@ -39,19 +39,26 @@ body {
 .h-section {
     background-color: white;
     margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
-.h-section > h1 {
+.h-section-center {
+    background-color: white;
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.h-section-center > h1 {
     width: 50%;
     margin-top: 20px;
     text-align: left;
     padding: 20px
 }
 
-.h-section > h4 {
+.h-section-center > h4 {
     width: 50%;
     margin-top: 20px;
     text-align: left;
@@ -61,6 +68,7 @@ body {
 
 .resume {
     margin: 40px;
+    margin-bottom: 0px;
     background-color: #DCDCDC;
     padding: 30px;
 }
@@ -69,17 +77,20 @@ body {
 
 }
 
-.projectCard {
-    height: 725px;
+.project-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    background-color: grey;
-    align-items: center;
-    justify-self: center; 
+    background-color: black;
     border-radius: 5px;
     overflow-wrap: break-word;
     display: block;
     overflow: auto;
+    margin: 20px;
+}
+
+.project-content {
+    margin: 15px;
+    color: white;
 }
 
 /* BUTTONS */
