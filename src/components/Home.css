@@ -1,0 +1,144 @@
+body {
+    background-color: #192a5b;
+}
+
+.Split {
+    display: grid;
+    grid-template-columns: 1fr .7fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.two-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.left-title-content {
+    margin: 45px;
+}
+
+.left-title-content > h2 {
+    color: white;
+    margin-bottom: 10px;
+    line-height: 65px;
+}
+
+
+.main-title {
+    color: white;
+    line-height: 65px;
+}
+
+/* SECTION STYLING */
+
+.h-section {
+    background-color: white;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-section > h1 {
+    width: 50%;
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px
+}
+
+.h-section > h4 {
+    width: 50%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* FUNCTIONS */
+
+.resume {
+    margin: 40px;
+    background-color: #DCDCDC;
+    padding: 30px;
+}
+
+.resumeCard {
+
+}
+
+.projectCard {
+    height: 725px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: grey;
+    align-items: center;
+    justify-self: center; 
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    display: block;
+    overflow: auto;
+}
+
+/* BUTTONS */
+
+.meet-element {
+    text-align: left; 
+    margin-left: 50px;
+    margin: 40px;
+}
+
+.meet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 50%  
+}
+
+/* OBJECTS */
+
+.square {
+    width: 100%;
+    height: 100%;
+    background-color: lightslategray; /* change this to your desired color */
+}
+
+/* MISC */
+
+.down-arrow {
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(4px 4px 2px black);
+}
+
+.center-obj {
+    transform: translateY(200%);
+    margin: auto;
+    width: 5%;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    animation: bounce 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    color: white;
+}
+
+
+@keyframes bounce {
+    from { transform: translate3d(0, 0, 0);}
+    to { transform: translate3d(0, 100px, 0);}
+}
+
+
+
