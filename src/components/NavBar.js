@@ -6,6 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect, useRef } from 'react';
+import Chip from '@mui/material/Chip';
 
 
 function OurBar(props) {
@@ -14,7 +15,7 @@ function OurBar(props) {
 
     return (
         <>
-            <Navbar>
+            <Navbar className='navbar-style-1'>
                 <Nav.Link>Home</Nav.Link>
                 <Nav.Link>About Me</Nav.Link>
                 <Nav.Link>Resume</Nav.Link>
