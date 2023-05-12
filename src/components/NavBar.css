@@ -1,13 +1,18 @@
 .navbar .nav-link {
-    color: #fff !important; 
-    display: inline-block;
+    color: black !important; 
+    font-weight: 350;
 
-  }
+}
 
 .navbar-style-1 {
-  box-shadow: 10px 10px 5px rgba(5, 5, 5, 0.25);
-  width: 100%;
-  padding: 10px;
-  min-width: 100%;
-  background-color: #5D6D7E;
+    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.25);
+    padding: 10px;
+    min-width: 100%;
+    margin-bottom: 20px;
+}
+
+.set-right {
+    text-align: right;
+    justify-content: end;
+    
 }

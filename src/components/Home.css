@@ -1,5 +1,10 @@
 body {
     background-color: #192a5b;
+    background-repeat: no-repeat;
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("/Users/emathieu/personal_projects/personal_site/src/imgs/breath-wild.jpeg");
+    background-repeat: no-repeat;
+    background-size :cover;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 img {
@@ -8,6 +13,13 @@ img {
 
 hr {
     border:rgba(11, 11, 11, 0.911);
+}
+
+h2 {
+    text-align: left;
+    font-style: italic;
+    font-size: medium;
+    margin: 20px;
 }
 
 .Split {
@@ -31,6 +43,7 @@ hr {
     margin: 20px;
 }
 
+
 .left-title-content {
     margin: 45px;
 }
@@ -49,22 +62,16 @@ hr {
 
 .title {
     box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid black;
-    margin: 10px;
+    border: 3px solid black;
+    margin: 20px;
     padding: 10px;
-    background-color: #1f2c53;
+    background-color: rgba(41, 54, 87, 0.8)
 }
 
 /* SECTION STYLING */
 
-.h-section {
-    background-color: white;
-    margin-top: 150px;
-
-}
-
 .h-section-center {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     margin-top: 150px;
     justify-content: center;
     align-items: center;
@@ -101,9 +108,7 @@ hr {
     background-color: white;
     padding: 30px;
     border-radius: 25px;
-    box-shadow: 5px 5px;
-    background: linear-gradient(to top, #ffffff 90%, lightslategray 10%); /* set top to red color */
-
+    box-shadow: 2px 2px 2px;
 }
 
 .resumeCard {
@@ -199,6 +204,16 @@ hr {
     to { transform: translate3d(0, 100px, 0);}
 }
 
+.fade-in {
+opacity: 0; /* Set the initial opacity to 0 */
+transition: opacity 1s ease-in-out; /* Add a transition effect that lasts 1 second */
+}
+
+.fade-in.show {
+opacity: 1; /* When the "show" class is added to the element, set opacity to 1 */
+}
+  
+
 
 .skill {
     font-size: 8;
@@ -206,3 +221,35 @@ hr {
     padding: 0px;
     margin: 0px;
 } 
+
+@keyframes highlight {
+    0% {
+        width: 0%; 
+        opacity: 0; 
+    }
+    50% {
+        width: 100%;
+        opacity: 1;
+        
+    }
+}
+
+
+.no-drop {
+    position: relative;
+}
+
+.no-drop::after {
+    text-shadow: 0px 0px black;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the pseudo element right under the content */
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, LightGray 100%, transparent 100%);
+    animation-name: highlight;
+    animation-duration: 3s;
+}

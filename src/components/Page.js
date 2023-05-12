@@ -9,8 +9,8 @@ import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import image from "../imgs/The-Legend-Of-Zelda-Breath-Of-The-Wild-PNG-Transparent-Image.png"
-
+import background_img from "../imgs/The-Legend-Of-Zelda-Breath-Of-The-Wild-PNG-Transparent-Image.png"
+import korok_img from "../imgs/korok2.png"
 
 
 const ProjectCard = (props) => {
@@ -25,29 +25,12 @@ const ProjectCard = (props) => {
                 </Card.Body>
             </Card>
         </div>
-        // <div className="project-card">
-        //     {props.img_src && <img src={props.img_src} alt="project-image" />}    
-        //     <h2 className='project-content'>{props.projectTitle}</h2>
-        //     <hr className='project-content' style={{backgroundColor: 'white'}}/>
-        //     <h4 className='project-content'>{props.duration}</h4>
-        //       {
-        //         props.skills && props.skills.map((skill) => {
-        //             return (
-        //                 <div className='skill'>
-        //                     <p className='project-content'>{skill}</p>
-        //                 </div>
-        //             )
-        //         })
-        //     }
-        //     <p className='project-content'>{props.description}</p>
-        // </div>
     )
-
 }
 
 const ResumeCard = (props) => {
     return (
-        <div>
+        <div>   
              <Card>
                 <Card.Body>
                     <Card.Title>{props.position}</Card.Title>
@@ -64,23 +47,25 @@ const ResumeCard = (props) => {
 function AboutMe() {
     return (
         <>
+            <h2>Yahaha! You found me!</h2>
+
             <div className='title'>
-            <Grid container spacing={2}>
-                <Grid item xs={7}>
-                    <div className="title-content">
-                        <h1 className='main-title'>
-                            My name is Ethan Mathieu.
-                            <br/>
-                            I'm studying Computer & Date Science at <br/> Yale University.
-                            <br />
-                        </h1> 
-                        <button id="meet" type="button" className="btn btn-dark">Meet Me</button>
-                    </div>
+                <Grid container spacing={2}>
+                    <Grid item xs={7}>
+                        <div className="title-content">
+                            <h1 className='main-title'>
+                                My name is <span className="no-drop">Ethan Mathieu.</span>
+                                <br/>
+                                I'm studying Computer Science at <br/> Yale University.
+                                <br />
+                            </h1> 
+                            <button id="meet" type="button" className="btn btn-dark">Meet Me</button>
+                        </div>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <img alt="link from breath of the wild" src={background_img}/>
+                    </Grid>
                 </Grid>
-                <Grid item xs={4}>
-                    <img alt="link from breath of the wild" src={image}/>
-                </Grid>
-            </Grid>
             </div>
         </>
     )
@@ -90,8 +75,6 @@ function Page() {
     return (  
         <>
             <OurBar />
-
-            <hr />
 
             <AboutMe />
             <div className='Split'>
@@ -128,13 +111,10 @@ function Page() {
 
             <div className='Split'>
                 <div className='square'/>
-                <p style={{color: '#192a5b;', fontSize: '20px' }}>kaity</p>
+                <p style={{color: '#192a5b;', fontSize: '20px' }}></p>
             </div>
-
+            
             <div className="resume">
-                <div className="resumeHeader">
-                    <h1><strong>Experience</strong></h1>
-                </div>
                 <ResumeCard
                     position="Undergraduate Research Assistant"
                     organizationName="Efficient Computing Lab"

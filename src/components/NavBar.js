@@ -15,15 +15,19 @@ function OurBar(props) {
 
     return (
         <>
-            <Navbar className='navbar-style-1'>
-                <Nav.Link>Home</Nav.Link>
-                <Nav.Link>About Me</Nav.Link>
-                <Nav.Link>Resume</Nav.Link>
-                <Nav.Link>Relevant Coursework</Nav.Link>
-                <Nav.Link>Portfolio</Nav.Link>
-                <Nav.Link>Contact Me</Nav.Link>
+            <Navbar className='navbar-style-1'>   
+                <Nav className='ml-auto'>        
+                    <Nav.Link>Home</Nav.Link>
+                    <Nav.Link>About Me</Nav.Link>
+                    <Nav.Link>Resume</Nav.Link>
+                    <Nav.Link>Relevant Coursework</Nav.Link>
+                    <Nav.Link>Portfolio</Nav.Link>
+                    <Nav.Link>Contact Me</Nav.Link>
+                </Nav>    
+                <Nav className="ms-auto">
+                    <Nav.Link className="set-right">Koroks Found: {props.korok}/10</Nav.Link>
+                </Nav>
             </Navbar>
-            <br></br>
         </>
       );
 }
