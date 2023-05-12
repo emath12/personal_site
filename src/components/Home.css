@@ -1,10 +1,26 @@
 body {
-    background-color: #192a5b;
+    background: url(/Users/emathieu/personal_projects/personal_site/src/imgs/breath-wild.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("/Users/emathieu/personal_projects/personal_site/src/imgs/breath-wild.jpeg");
-    background-repeat: no-repeat;
-    background-size :cover;
     font-family: Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+    font-family: Triforce;
+    src: url(/Users/emathieu/personal_projects/personal_site/Triforce.ttf);
+}
+
+@font-face {
+    font-family: Sheikah;
+    src: url(/Users/emathieu/personal_projects/personal_site/BotW_Sheikah.ttf);
+}
+
+.sheikah-span {
+    font-family: Sheikah;
+    color: white;
 }
 
 img {
@@ -36,6 +52,9 @@ h2 {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 5px;
+    margin-top: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .title-content {
@@ -61,6 +80,16 @@ h2 {
 }
 
 .title {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 20px;
+}
+
+.who-box {
     box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
     border: 3px solid black;
     margin: 20px;
@@ -71,7 +100,7 @@ h2 {
 /* SECTION STYLING */
 
 .h-section-center {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     margin-top: 150px;
     justify-content: center;
     align-items: center;

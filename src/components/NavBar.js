@@ -25,7 +25,7 @@ function OurBar(props) {
                     <Nav.Link>Contact Me</Nav.Link>
                 </Nav>    
                 <Nav className="ms-auto">
-                    <Nav.Link className="set-right">Koroks Found: {props.korok}/10</Nav.Link>
+                    <Nav.Link className="set-right zelda-span">Koroks Found: {props.korok}/10</Nav.Link>
                 </Nav>
             </Navbar>
         </>

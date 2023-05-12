@@ -1,9 +1,8 @@
 import './Home.css'
 import './NavBar.js'
 import OurBar from './NavBar.js'
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid'; // Grid version 1
 import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Box from '@mui/material/Box';
@@ -11,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import background_img from "../imgs/The-Legend-Of-Zelda-Breath-Of-The-Wild-PNG-Transparent-Image.png"
 import korok_img from "../imgs/korok2.png"
+import placeholder from "../imgs/placeholder.png"
 
 
 const ProjectCard = (props) => {
@@ -18,6 +18,7 @@ const ProjectCard = (props) => {
         <div className="project-card">
             <Card>
                 <Card.Header as="h5">Featured</Card.Header>
+                <img src={placeholder}/>
                 <Card.Body>
                     <Card.Title>{props.projectTitle}</Card.Title>
                     <Card.Text>{props.duration}</Card.Text>
@@ -49,7 +50,7 @@ function AboutMe() {
         <>
             <h2>Yahaha! You found me!</h2>
 
-            <div className='title'>
+            <div className='who-box'>
                 <Grid container spacing={2}>
                     <Grid item xs={7}>
                         <div className="title-content">
@@ -60,6 +61,14 @@ function AboutMe() {
                                 <br />
                             </h1> 
                             <button id="meet" type="button" className="btn btn-dark">Meet Me</button>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <h1 className='sheikah-span'>Learn All</h1>
                         </div>
                     </Grid>
                     <Grid item xs={4}>
@@ -71,16 +80,13 @@ function AboutMe() {
     )
 }
 
-function Page() {
+function Page() {   
     return (  
         <>
             <OurBar />
 
             <AboutMe />
-            <div className='Split'>
-                <div className='square'/>
-            </div>
-            
+                
             <br/>
 
             <div className="center-obj">
@@ -109,11 +115,6 @@ function Page() {
                 </h4>  
             </div>
 
-            <div className='Split'>
-                <div className='square'/>
-                <p style={{color: '#192a5b;', fontSize: '20px' }}></p>
-            </div>
-            
             <div className="resume">
                 <ResumeCard
                     position="Undergraduate Research Assistant"
@@ -141,50 +142,50 @@ function Page() {
                 />
             </div>
 
-            
+            <h1 className='title'>My Work</h1>         
             <div className='h-section'>
                 <br></br>
-                <center><h1>My Work</h1></center>
-
-                <div className="two-grid">
-                    <ProjectCard
-                        projectTitle="Dynamic Finance Portfolio"
-                        duration="January 2023 - April 2023 (anticipated)"
-                        description="The squarely linked list: a grid data structure written in Python"
-                        skills={["In Progress", "Fullstack", "ReactJS", "Python", "SQLite", "Flask", "GitHub"]}
-                    />
-                    <ProjectCard
-                        projectTitle="Squarely LinkedList Library"
-                        duration="July 2022"
-                        description="The squarely linked list is a dynamic grid data structure that I designed in Python as a sort of 
-                        capstone to my Datastructures class at Yale. It supports appendation, insertion, deletion, and logical printing.
-                        What makes it unique is how connected each of the nodes are to one another, allowing for grid-style represenations. "
-                        skills={["Python"]}
-                    />
-                    <ProjectCard
-                        projectTitle="Weekify: Plan Your Week"
-                        duration="MVP released in July 2022. Future versions in progress."
-                        description="Inspired by Gcal, Weekify allows you to add to-dos to a week-long schedule."
-                        skills={["In Progress", "ReactJS", "GitHub"]}
-                    />
-                    <ProjectCard
-                        projectTitle="C++ Macro Processor"
-                        duration="July 2022"
-                        description="The squarely linked list: a grid data structure written in Python"
-                        skills={[""]}
-                    />
-                    <ProjectCard
-                        projectTitle="Yale Undergraduate Art Gallery GUI"
-                        duration="March 2022"
-                        description="The squarely linked list: a grid data structure written in Python"
-                        skills={[""]}
-                    />
-                    <ProjectCard
-                        projectTitle="Research Applications"
-                        duration="July 2022"
-                        description="The squarely linked list: a grid data structure written in Python"
-                        skills={[""]}
-                    />
+                <div style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
+                    <div className="two-grid">
+                        <ProjectCard
+                            projectTitle="Dynamic Finance Portfolio"
+                            duration="January 2023 - April 2023 (anticipated)"
+                            description="The squarely linked list: a grid data structure written in Python"
+                            skills={["In Progress", "Fullstack", "ReactJS", "Python", "SQLite", "Flask", "GitHub"]}
+                        />
+                        <ProjectCard
+                            projectTitle="Squarely LinkedList Library"
+                            duration="July 2022"
+                            description="The squarely linked list is a dynamic grid data structure that I designed in Python as a sort of 
+                            capstone to my Datastructures class at Yale. It supports appendation, insertion, deletion, and logical printing.
+                            What makes it unique is how connected each of the nodes are to one another, allowing for grid-style represenations. "
+                            skills={["Python"]}
+                        />
+                        <ProjectCard
+                            projectTitle="Weekify: Plan Your Week"
+                            duration="MVP released in July 2022. Future versions in progress."
+                            description="Inspired by Gcal, Weekify allows you to add to-dos to a week-long schedule."
+                            skills={["In Progress", "ReactJS", "GitHub"]}
+                        />
+                        <ProjectCard
+                            projectTitle="C++ Macro Processor"
+                            duration="July 2022"
+                            description="The squarely linked list: a grid data structure written in Python"
+                            skills={[""]}
+                        />
+                        <ProjectCard
+                            projectTitle="Yale Undergraduate Art Gallery GUI"
+                            duration="March 2022"
+                            description="The squarely linked list: a grid data structure written in Python"
+                            skills={[""]}
+                        />
+                        <ProjectCard
+                            projectTitle="Research Applications"
+                            duration="July 2022"
+                            description="The squarely linked list: a grid data structure written in Python"
+                            skills={[""]}
+                        />
+                    </div>
                 </div>
             </div>
     
