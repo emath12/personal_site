@@ -20,11 +20,17 @@ body {
 
 .sheikah-span {
     font-family: Sheikah;
-    color: white;
+    color: black;
 }
 
-img {
-    filter: drop-shadow(10px 10px 4px black);
+.do-hover {
+    transition: all 0.2s ease;
+}
+
+.do-hover:hover {
+    filter: drop-shadow(2px 2px 2px black);
+    transform: scale(1.01);
+
 }
 
 hr {
@@ -45,6 +51,21 @@ h2 {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
+
+.skill-rack {
+
+}
+
+.skill {
+    display: inline-block;
+    font-size: 8;
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 2px;
+    text-align: left;
+    background-color: gray;
+}
+
 
 .two-grid {
     display: grid;
@@ -87,6 +108,11 @@ h2 {
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
     padding: 20px;
+    border: 2px solid black;
+}
+
+.more-padding {
+    padding: 30px;
 }
 
 .who-box {
@@ -129,25 +155,31 @@ h2 {
     text-align: left;
 }
 
-/* FUNCTIONS */
-
-.resume {
-    margin: 40px;
-    margin-bottom: 0px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 2px 2px 2px;
+.dock {
+    display: flex;
+    justify-content: space-between;
 }
 
-.resumeCard {
+.dock-left {
+    align-self: flex-start;
+}
 
+.dock-right {
+    align-self: flex-end;
+}
+
+/* FUNCTIONS */
+
+.resume-card {
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 30px;
+    margin-top: 10px;
+    opacity: 90%;
 }
 
 .button-style-1 {
-    border-radius: 5px;
-    padding: 5px;
-    border-color: black;
+
 }
 
 .button-style-1:hover {
@@ -242,14 +274,6 @@ transition: opacity 1s ease-in-out; /* Add a transition effect that lasts 1 seco
 opacity: 1; /* When the "show" class is added to the element, set opacity to 1 */
 }
   
-
-
-.skill {
-    font-size: 8;
-    display: inline-block;
-    padding: 0px;
-    margin: 0px;
-} 
 
 @keyframes highlight {
     0% {

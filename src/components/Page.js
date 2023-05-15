@@ -1,6 +1,7 @@
 import './Home.css'
 import './NavBar.js'
 import OurBar from './NavBar.js'
+import Footer from './Footer.js'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Grid from '@mui/material/Grid'; // Grid version 1
@@ -11,18 +12,19 @@ import { styled } from '@mui/material/styles';
 import background_img from "../imgs/The-Legend-Of-Zelda-Breath-Of-The-Wild-PNG-Transparent-Image.png"
 import korok_img from "../imgs/korok2.png"
 import placeholder from "../imgs/placeholder.png"
+import html_img from "../imgs/html_logo.png"
+import mint_port from "../imgs/mintporfolio.png"
 
 
 const ProjectCard = (props) => {
     return (
-        <div className="project-card">
+        <div className="project-card do-hover">
             <Card>
-                <Card.Header as="h5">Featured</Card.Header>
-                <img src={placeholder}/>
+                {props.current ? <Card.Header style={{backgroundColor: "lightgray"}}>Current Position</Card.Header> : null}
+                <img style={{maxHeight: 312.5, maxWidth: 2000}} src={props.image}/>
                 <Card.Body>
                     <Card.Title>{props.projectTitle}</Card.Title>
                     <Card.Text>{props.duration}</Card.Text>
-                    <Button>Learn More</Button>
                 </Card.Body>
             </Card>
         </div>
@@ -31,19 +33,41 @@ const ProjectCard = (props) => {
 
 const ResumeCard = (props) => {
     return (
-        <div>   
-             <Card>
+        <div className='resume-card do-hover'>   
+            <Card style={{border: "2px solid black"}}>
+                {props.current ? <Card.Header style={{backgroundColor: "lightgray"}}>Current Position</Card.Header> : null}
                 <Card.Body>
-                    <Card.Title>{props.position}</Card.Title>
+                    <Card.Title style={{fontWeight: "400"}}>{props.position}</Card.Title>
                     <Card.Text>{props.organizationName}</Card.Text>
                     <Card.Text>{props.duration}</Card.Text>
-                    <Button class="button-style-1">Learn More</Button>
-                </Card.Body>
+                   
+                    <div className="dock">
+                        <SkillRack 
+                            skills={["React"]}
+                        />                       
+                        <h3 className="dock-left sheikah-span">Yo</h3>
+                    </div>
+                </Card.Body>  
             </Card>
             <br></br>
         </div>
     );
 }
+
+const SkillRack = (props) => {
+    return (
+        <div className='skill-rack'>
+            {
+                props.skills.map(skill => {
+                    return ( 
+                        <strong><p>{skill}</p></strong>
+                    )
+                })
+            }
+        </div>
+    );
+}
+
 
 function AboutMe() {
     return (
@@ -72,7 +96,11 @@ function AboutMe() {
                         </div>
                     </Grid>
                     <Grid item xs={4}>
-                        <img alt="link from breath of the wild" src={background_img}/>
+                        <img className='do-hover'
+                            alt="link from breath of the wild"
+                            src={background_img}
+                            style={{filter: "drop-shadow(10px 10px 4px black)"}}
+                            />
                     </Grid>
                 </Grid>
             </div>
@@ -86,7 +114,7 @@ function Page() {
             <OurBar />
 
             <AboutMe />
-                
+
             <br/>
 
             <div className="center-obj">
@@ -115,34 +143,51 @@ function Page() {
                 </h4>  
             </div>
 
-            <div className="resume">
-                <ResumeCard
-                    position="Undergraduate Research Assistant"
-                    organizationName="Efficient Computing Lab"
-                    duration="June 2022 - Present"
-                    description={["description"]}
-                />
-                <ResumeCard
-                    position="Software Development Team Lead"
-                    organizationName="Yale Computer Society"
-                    duration="October 2022 - Present"
-                    description={["description"]}
-                />
-                <ResumeCard
-                    position="Undergraduate Research Assistant"
-                    organizationName="Efficient Computing Lab"
-                    duration="June 2022 - Present"
-                    description={["description"]}
-                />
-                <ResumeCard
-                    position="Undergraduate Research Assistant"
-                    organizationName="Efficient Computing Lab"
-                    duration="June 2022 - Present"
-                    description={["description"]}
-                />
-            </div>
+            <br></br>
 
-            <h1 className='title'>My Work</h1>         
+            <h1 className='title'>Experience</h1>
+
+            <br></br>
+
+            <ResumeCard 
+                position="Software Engineering Intern"
+                organizationName="Proctor & Gamble"
+                duration="May 2023 - Present"
+                current={true}
+                description={["deescription "]}
+            />
+
+            <ResumeCard
+                position="Undergraduate Research Assistant"
+                organizationName="Efficient Computing Lab"
+                duration="June 2022 - Jan 2023"
+                description={["description"]}
+            />
+
+            <ResumeCard
+                position="Vice President"
+                organizationName="Yale Computer Society"
+                duration="May 2023 - Present"
+            />
+            <ResumeCard
+                position="Software Development Team Lead"
+                organizationName="Yale Computer Society"
+                duration="October 2022 - Present"
+                description={["description"]}
+            />
+            <ResumeCard
+                position="Undergraduate Research Assistant"
+                organizationName="Efficient Computing Lab"
+                duration="June 2022 - Present"
+                description={["description"]}
+            />
+            <ResumeCard
+                position="Undergraduate Research Assistant"
+                organizationName="Efficient Computing Lab"
+                duration="June 2022 - Present"
+                description={["description"]}
+            />
+
             <div className='h-section'>
                 <br></br>
                 <div style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
@@ -152,6 +197,7 @@ function Page() {
                             duration="January 2023 - April 2023 (anticipated)"
                             description="The squarely linked list: a grid data structure written in Python"
                             skills={["In Progress", "Fullstack", "ReactJS", "Python", "SQLite", "Flask", "GitHub"]}
+                            image={mint_port}
                         />
                         <ProjectCard
                             projectTitle="Squarely LinkedList Library"
@@ -160,36 +206,57 @@ function Page() {
                             capstone to my Datastructures class at Yale. It supports appendation, insertion, deletion, and logical printing.
                             What makes it unique is how connected each of the nodes are to one another, allowing for grid-style represenations. "
                             skills={["Python"]}
+                            image={placeholder}
                         />
                         <ProjectCard
                             projectTitle="Weekify: Plan Your Week"
                             duration="MVP released in July 2022. Future versions in progress."
                             description="Inspired by Gcal, Weekify allows you to add to-dos to a week-long schedule."
                             skills={["In Progress", "ReactJS", "GitHub"]}
+                            image={placeholder}
                         />
                         <ProjectCard
                             projectTitle="C++ Macro Processor"
                             duration="July 2022"
                             description="The squarely linked list: a grid data structure written in Python"
                             skills={[""]}
+                            image={placeholder}
+
                         />
                         <ProjectCard
                             projectTitle="Yale Undergraduate Art Gallery GUI"
                             duration="March 2022"
                             description="The squarely linked list: a grid data structure written in Python"
                             skills={[""]}
+                            image={placeholder}
                         />
                         <ProjectCard
                             projectTitle="Research Applications"
                             duration="July 2022"
                             description="The squarely linked list: a grid data structure written in Python"
                             skills={[""]}
-                        />
+                            image={placeholder}
+
+                        />  
                     </div>
                 </div>
             </div>
-    
+
+            <h1 className='title'>Relevant Courses</h1>
+
             
+            <ul className='title more-padding'>
+                <li>CPSC 201: Introduction to Computer Science</li>
+                <li>CPSC 223: Datastructures and Programming Techniques</li>
+                <li>CPSC 202: Mathemtical Tools for Computer Science</li>
+                <li>CPSC 323: Systems Programming and Computer Organization</li>
+                <li>CPSC 365: Algorithms</li>
+                <li>CPSC 419: Introduction to Full-Stack Web Programming</li>
+                <li>MATH 115: Calculus of Single Variable II</li>
+                <li>MATH 222: Linear Algebra with Applications (in progress)</li>
+            </ul>
+            
+            <Footer/>
         </>
     )
     
