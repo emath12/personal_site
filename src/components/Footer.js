@@ -25,6 +25,10 @@ export default function Footer() {
                 <MDBBtn outline color="dark" floating className='m-1' href='https://github.com/emath12' role='button'>
                     <MDBIcon fab icon='github' />
                 </MDBBtn>
+
+                <MDBBtn outline color="dark" floating className='m-1' href="mailto:ethan.mathieu@yale.edu" role='button'>
+                    <MDBIcon fab icon='google' />
+                </MDBBtn>
             </section>
 
         </MDBContainer>

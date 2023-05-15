@@ -53,17 +53,12 @@ h2 {
 }
 
 .skill-rack {
+    font-style: italic;
+
 
 }
 
-.skill {
-    display: inline-block;
-    font-size: 8;
-    margin-right: 10px;
-    padding: 8px;
-    border-radius: 2px;
-    text-align: left;
-    background-color: gray;
+.listed-card-text {
 }
 
 

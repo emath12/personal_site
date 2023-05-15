@@ -2,6 +2,8 @@ import './Home.css'
 import './NavBar.js'
 import OurBar from './NavBar.js'
 import Footer from './Footer.js'
+import ResumeCard from './ResumeCard.js'
+import ProjectCard from './ProjectCard.js'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Grid from '@mui/material/Grid'; // Grid version 1
@@ -14,60 +16,6 @@ import korok_img from "../imgs/korok2.png"
 import placeholder from "../imgs/placeholder.png"
 import html_img from "../imgs/html_logo.png"
 import mint_port from "../imgs/mintporfolio.png"
-
-
-const ProjectCard = (props) => {
-    return (
-        <div className="project-card do-hover">
-            <Card>
-                {props.current ? <Card.Header style={{backgroundColor: "lightgray"}}>Current Position</Card.Header> : null}
-                <img style={{maxHeight: 312.5, maxWidth: 2000}} src={props.image}/>
-                <Card.Body>
-                    <Card.Title>{props.projectTitle}</Card.Title>
-                    <Card.Text>{props.duration}</Card.Text>
-                </Card.Body>
-            </Card>
-        </div>
-    )
-}
-
-const ResumeCard = (props) => {
-    return (
-        <div className='resume-card do-hover'>   
-            <Card style={{border: "2px solid black"}}>
-                {props.current ? <Card.Header style={{backgroundColor: "lightgray"}}>Current Position</Card.Header> : null}
-                <Card.Body>
-                    <Card.Title style={{fontWeight: "400"}}>{props.position}</Card.Title>
-                    <Card.Text>{props.organizationName}</Card.Text>
-                    <Card.Text>{props.duration}</Card.Text>
-                   
-                    <div className="dock">
-                        <SkillRack 
-                            skills={["React"]}
-                        />                       
-                        <h3 className="dock-left sheikah-span">Yo</h3>
-                    </div>
-                </Card.Body>  
-            </Card>
-            <br></br>
-        </div>
-    );
-}
-
-const SkillRack = (props) => {
-    return (
-        <div className='skill-rack'>
-            {
-                props.skills.map(skill => {
-                    return ( 
-                        <strong><p>{skill}</p></strong>
-                    )
-                })
-            }
-        </div>
-    );
-}
-
 
 function AboutMe() {
     return (
@@ -84,6 +32,7 @@ function AboutMe() {
                                 I'm studying Computer Science at <br/> Yale University.
                                 <br />
                             </h1> 
+                            <br/>
                             <button id="meet" type="button" className="btn btn-dark">Meet Me</button>
                             <br></br>
                             <br></br>
@@ -134,9 +83,6 @@ function Page() {
                     solve problems efficiently. 
                     <br/> 
                     <br/>
-                    As a <strong>Software Development Team Lead</strong> @ Yale Computer Society (y/cs) and a <strong>Research
-                    Assistant</strong> @ Efficent Computing Lab (ECL), I'm constantly sharpening my technical skills.   
-                    <br/>
                     <br/>
                     I'm interested in software engineering, data scientist and technical research opportunities! Please
                     feel free to contact me with the socials at the bottom of my site.
@@ -154,20 +100,27 @@ function Page() {
                 organizationName="Proctor & Gamble"
                 duration="May 2023 - Present"
                 current={true}
-                description={["deescription "]}
+                description={["deescription", "description"]}
             />
-
+            <ResumeCard
+                position="Vice President"
+                organizationName="Yale Computer Society"
+                duration="May 2023 - Present"
+                current={true}
+                description={[""]}
+            />
+            <ResumeCard
+                position="Yale CS Departmental Student Advisory Committee Member"
+                organizationName="Yale DSAC"
+                duration="May 2023 - Present"
+                description={["description"]}
+                current={true}
+            />
             <ResumeCard
                 position="Undergraduate Research Assistant"
                 organizationName="Efficient Computing Lab"
                 duration="June 2022 - Jan 2023"
                 description={["description"]}
-            />
-
-            <ResumeCard
-                position="Vice President"
-                organizationName="Yale Computer Society"
-                duration="May 2023 - Present"
             />
             <ResumeCard
                 position="Software Development Team Lead"
@@ -175,19 +128,14 @@ function Page() {
                 duration="October 2022 - Present"
                 description={["description"]}
             />
-            <ResumeCard
-                position="Undergraduate Research Assistant"
-                organizationName="Efficient Computing Lab"
-                duration="June 2022 - Present"
-                description={["description"]}
-            />
-            <ResumeCard
-                position="Undergraduate Research Assistant"
-                organizationName="Efficient Computing Lab"
-                duration="June 2022 - Present"
-                description={["description"]}
-            />
 
+            <ResumeCard
+                position="CS Teaching Mentor"
+                organizationName="Code Haven"
+                duration="Oct. 2021 - Dec. 2021"
+                description={["description"]}
+            />
+  
             <div className='h-section'>
                 <br></br>
                 <div style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
@@ -255,7 +203,7 @@ function Page() {
                 <li>MATH 115: Calculus of Single Variable II</li>
                 <li>MATH 222: Linear Algebra with Applications (in progress)</li>
             </ul>
-            
+
             <Footer/>
         </>
     )

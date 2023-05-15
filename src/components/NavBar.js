@@ -11,8 +11,6 @@ import Chip from '@mui/material/Chip';
 
 function OurBar(props) {
 
-    // TODO : fix the left aign, dunno why its not working
-
     return (
         <>
             <Navbar className='navbar-style-1'>   
