@@ -47,7 +47,7 @@ function AboutMe() {
                             <h6
                                 style={{color: "white", fontStyle: "italic"}}
                             >
-                                Simplicity • Functionality • Excellence
+                                Simplistic Design • Excellent Performance • Clean Architecture
                             </h6>
                         </div>
                     </Grid>   
