@@ -7,11 +7,17 @@ const ResumeCard = (props) => {
             <Card style={{border: "2px solid black"}}>
                 {props.current ? <Card.Header style={{backgroundColor: "lightgray"}}>Current Position</Card.Header> : null}
                 <Card.Body>
-                    <Card.Title>{props.position}</Card.Title>
+                    <Card.Title style={{ fontWeight: "bold" }}>{props.position}</Card.Title>
                     <span>{props.organizationName}</span>
                     <br></br>
                     <span>{props.duration}</span>
-                    <hr></hr>
+                    <hr
+                    style={{
+                        height: "4px",
+                        border: "none",
+                        borderTop: "2px solid black",
+                    }}
+                    />
                     <div className="dock">
                         <SkillRack 
                             skills={props.skills}

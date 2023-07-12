@@ -3,9 +3,6 @@ import {
   MDBFooter,
   MDBContainer,
   MDBIcon,
-  MDBInput,
-  MDBCol,
-  MDBRow,
   MDBBtn
 } from 'mdb-react-ui-kit';
 
@@ -18,15 +15,15 @@ export default function Footer() {
         <MDBFooter className='text-center' color='white' bgColor='transparent'>
         <MDBContainer className='p-4'>
             <section className='mb-4'>
-                <MDBBtn outline color="dark" floating className='m-1' href='https://www.linkedin.com/in/ethan-mathieu/' role='button'>
+                <MDBBtn outline color="light" floating className='m-1' href='https://www.linkedin.com/in/ethan-mathieu/' role='button'>
                     <MDBIcon fab icon='linkedin-in' />
                 </MDBBtn>
 
-                <MDBBtn outline color="dark" floating className='m-1' href='https://github.com/emath12' role='button'>
+                <MDBBtn outline color="light" floating className='m-1' href='https://github.com/emath12' role='button'>
                     <MDBIcon fab icon='github' />
                 </MDBBtn>
 
-                <MDBBtn outline color="dark" floating className='m-1' href="mailto:ethan.mathieu@yale.edu" role='button'>
+                <MDBBtn outline color="light" floating className='m-1' href="mailto:ethan.mathieu@yale.edu" role='button'>
                     <MDBIcon fab icon='google' />
                 </MDBBtn>
             </section>

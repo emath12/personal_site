@@ -2,24 +2,31 @@ import './Home.css'
 import './NavBar.js'
 import OurBar from './NavBar.js'
 import Footer from './Footer.js'
+import { styled } from '@mui/system';
 import ResumeCard from './ResumeCard.js'
 import ProjectCard from './ProjectCard.js'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Grid from '@mui/material/Grid'; // Grid version 1
-import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
-import korok_img from "../imgs/korok2.png"
 import placeholder from "../imgs/placeholder.png"
-import html_img from "../imgs/html_logo.png"
 import mint_port from "../imgs/mintporfolio.png"
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import TimelineOppositeContent, {
+  timelineOppositeContentClasses,
+} from '@mui/lab/TimelineOppositeContent';
+import WeekifyImg from "../imgs/Weekify.png"
+import guiImg from "../imgs/gui.png"
+import ymeetsimg from "../imgs/ymeets.png"
+
 
 function AboutMe() {
     return (
         <>
-                <h2>Yahaha! You found me!</h2>
+            
+            <h2>Yahaha! You found me!</h2>
 
             <div className='the-page-style'>
 
@@ -36,11 +43,12 @@ function AboutMe() {
                             <br></br>
                             <br></br>
                             <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <h1 className='sheikah-span'>Learn All</h1>
+                              
+                            <h6
+                                style={{color: "white", fontStyle: "italic"}}
+                            >
+                                Simplicity • Functionality • Excellence
+                            </h6>
                         </div>
                     </Grid>   
                                 
@@ -50,7 +58,24 @@ function AboutMe() {
     )
 }
 
-function Page() {   
+function Page() {  
+    
+    const StyledTimeline = styled(Timeline)({
+        marginRight: 'auto', // Align the Timeline to the left
+    });
+      
+      const StyledTimelineSeparator = styled(TimelineSeparator)({
+        marginLeft: 0, // Align the TimelineSeparator to the left by removing left margin
+      });
+      
+      const StyledTimelineConnector = styled(TimelineConnector)({
+        backgroundColor: '#bbb', // Set the color for the TimelineConnector lines
+      });
+      
+      const StyledTimelineDot = styled(TimelineDot)({
+        borderColor: '#bbb', // Set the color for the TimelineDot borders
+      });
+    
     return (  
         <>
             <OurBar />
@@ -59,10 +84,10 @@ function Page() {
 
             <AboutMe />
 
-            <br/>
-
             <div className="center-obj">
-                <div className="down-arrow"></div>
+                <br></br>
+                <div className="down-arrow">
+                </div>
             </div>
 
             <a id="about-me"/>
@@ -92,101 +117,168 @@ function Page() {
 
             <br></br>
 
-            <ResumeCard 
-                position="Software Engineering Intern"
-                organizationName="Procter & Gamble"
-                duration="May 2023 - Present"
-                current={true}
-                description={["Engineering a fullstack web application designed to solve an internal corperate inefficency."]}
-            />
-            <ResumeCard
-                position="Vice President"
-                organizationName="Yale Computer Society"
-                duration="May 2023 - Present"
-                current={true}
-                description={["Elected in a landslide over opposition to direct the internal operations of the Yale Computer Society in the 2023-4 academic year."]}
-            />
-            <ResumeCard
-                position="Accelerate - Software Track Participant"
-                organizationName="IBM"
-                duration="May 2023 - Present"
-                current={true}
-                description={["Attending weekly, hands-on apprenticeship sessions to hone my industry skills in software engineering."]}
-            />
-            <ResumeCard
-                position="Research Assistant"
-                organizationName="Efficient Computing Lab"
-                duration="June 2022 - Jan 2023"
-                description={["Designed software applications on top of the experimental Theseus Operating System (OS) to measure and improve the network throughput of the OS’ 10 GbE ixgbe Network Driver.", "Programmed changes to the OS' driver transmission path in Rust that increased emulated throughput. My changes were adapted into the current version of the driver. Presented findings in a cumulative lab meeting."]}
-            />
-            <ResumeCard
-                position="Software Development Team Lead"
-                organizationName="Yale Computer Society"
-                duration="October 2022 - August 2023"
-                description={["Construct strategy and assign tasks critical as a I lead a team of 15 undergraduate software developers.", "Review code, design, and program changes necessary to the stability and final release of product in React.js"]}
-            />
-            <ResumeCard
-                position="CS Teaching Mentor"
-                organizationName="Code Haven"
-                duration="Oct. 2021 - Dec. 2021"
-                description={["Taught middle schoolers the basics of CS through an extensive, semester long cirriculum"]}
-            />
+            <StyledTimeline
+              sx={{
+                [`& .${timelineOppositeContentClasses.root}`]: {
+                  flex: 0.00625,
+                },
 
+              }}
+            >
+                <p
+                    style={{color: "white", fontStyle: "italic", marginLeft: "10px"}}
+                >
+                    "Life happens wherever you are, whether you make it or not." - Uncle Iroh
+                </p>
+                <TimelineItem>
+                    <TimelineOppositeContent color="textSecondary" />
+                    <StyledTimelineSeparator>
+                    <StyledTimelineDot />
+                    <StyledTimelineConnector />
+                    </StyledTimelineSeparator>
+                    <TimelineContent>
+                    <ResumeCard
+                        position="Software Engineering Intern"
+                        organizationName="Procter & Gamble"
+                        duration="May 2023 - Present"
+                        current={true}
+                        description={[
+                        "Engineering a novel software solution built on a Google BigQuery, Python, and Next.js/Vue.js tech stack to reconcile millions of mismatched records across P&G’s enterprise databases.",
+                        "Designing an extract-transform-load process to support the fullstack software solution, which together will drive significant value due to saved time and the new metric analysis unlocked.",
+                        "Collaborate through weekly workshops with the purchasing department to ensure new software meets their needs."
+                        ]}
+                    />
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineOppositeContent color="textSecondary" />
+                    <StyledTimelineSeparator>
+                    <StyledTimelineDot />
+                    <StyledTimelineConnector />
+                    </StyledTimelineSeparator>
+                    <TimelineContent>
+                    <ResumeCard
+                        position="Vice President"
+                        organizationName="Yale Computer Society"
+                        duration="May 2023 - Present"
+                        current={true}
+                        description={[
+                        "Elected in a landslide over opposition to direct the internal operations of the Yale Computer Society in the 2023-4 academic year.",
+                        ]}
+                    />
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineOppositeContent color="textSecondary" />
+                    <StyledTimelineSeparator>
+                    <StyledTimelineDot />
+                    <StyledTimelineConnector />
+                    </StyledTimelineSeparator>
+                    <TimelineContent>
+                    <ResumeCard
+                        position="Accelerate - Software Track Participant"
+                        organizationName="IBM"
+                        duration="May 2023 - Present"
+                        current={true}
+                        description={[
+                        "Attending weekly, hands-on apprenticeship sessions to hone my industry skills in software engineering.",
+                        "Intensive 7.4% acceptance rate program with weekly sessions focused on developing industry software skills."
+                        ]}
+                    />
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineOppositeContent color="textSecondary" />
+                    <StyledTimelineSeparator>
+                    <StyledTimelineDot />
+                    <StyledTimelineConnector />
+                    </StyledTimelineSeparator>
+                    <TimelineContent>
+                    <ResumeCard
+                        position="Research Assistant"
+                        organizationName="Efficient Computing Lab"
+                        duration="June 2022 - Jan 2023"
+                        description={[
+                        "Programmed changes to experimental network driver’s transmission path that increased emulated throughput by as much as 50% in tests.",
+                        "Changes were adapted into later iterations of the driver.",
+                        ]}
+                    />
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineOppositeContent color="textSecondary" />
+                    <StyledTimelineSeparator>
+                    <StyledTimelineDot />
+                    <StyledTimelineConnector />
+                    </StyledTimelineSeparator>
+                    <TimelineContent>
+                    <ResumeCard
+                        position="Software Development Team Lead"
+                        organizationName="Yale Computer Society"
+                        duration="October 2022 - August 2023"
+                        description={[
+                            "Develop high-level product roadmaps and software architecture strategies.",
+                            "Steered 15 developers through the delivery of a group scheduling software prototype despite a truncated development timeline."
+                            ]}
+                    />
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineOppositeContent color="textSecondary" />
+                    <StyledTimelineSeparator>
+                    <StyledTimelineDot />
+                    <StyledTimelineConnector />
+                    </StyledTimelineSeparator>
+                    <TimelineContent>
+                    <ResumeCard
+                        position="CS Teaching Mentor"
+                        organizationName="Code Haven"
+                        duration="Oct. 2021 - Dec. 2021"
+                        description={["Taught middle schoolers the basics of CS through an extensive, semester long cirriculum"]}
+                    />
+                    </TimelineContent>
+                </TimelineItem>
+            </StyledTimeline>
+    
             <a id="portfolio" />
   
             <div className='h-section'>
                 <br></br>
                 <div style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
+
                     <div className="two-grid">
                         <ProjectCard
                             projectTitle="MintPortfolio"
                             duration="January 2023 - April 2023"
                             description="Principal developer of an app whose functionality mimics Google Finance, allowing users to create and save their own stock portfolios and compare their performance against the market. 
-                            Application served as the capstone to my full-stack web development class at Yale.
-                            
-                            "
+                            Application served as the capstone to my full-stack web development class at Yale."
                             skills={["In Progress", "Fullstack", "ReactJS", "Python", "SQLite", "Flask", "GitHub"]}
                             image={mint_port}
-                        />
-                        <ProjectCard
-                            projectTitle="Squarely LinkedList Library"
-                            duration="July 2022"
-                            description="The squarely linked list is a dynamic grid data structure that I designed in Python as a sort of 
-                            capstone to my Datastructures class at Yale. It supports appendation, insertion, deletion, and logical printing.
-                            What makes it unique is how connected each of the nodes are to one another, allowing for grid-style represenations. "
-                            skills={["Python"]}
-                            image={placeholder}
-                        />
+                        />  
                         <ProjectCard
                             projectTitle="Weekify: Plan Your Week"
                             duration="MVP released in July 2022. Future versions in progress."
                             description="Inspired by Gcal, Weekify allows you to add to-dos to a week-long schedule."
                             skills={["In Progress", "ReactJS", "GitHub"]}
-                            image={placeholder}
+                            image={WeekifyImg}
                         />
-                        <ProjectCard
-                            projectTitle="C++ Macro Processor"
-                            duration="July 2022"
-                            description="The squarely linked list: a grid data structure written in Python"
-                            skills={[""]}
-                            image={placeholder}
-
-                        />
+                    
                         <ProjectCard
                             projectTitle="Yale Undergraduate Art Gallery GUI"
                             duration="March 2022"
                             description="The squarely linked list: a grid data structure written in Python"
                             skills={[""]}
-                            image={placeholder}
+                            image={guiImg}
                         />
                         <ProjectCard
-                            projectTitle="Research Applications"
-                            duration="July 2022"
+                            projectTitle="ymeets - yale scheduling made easy"
+                            duration="In Progress"
                             description="The squarely linked list: a grid data structure written in Python"
                             skills={[""]}
-                            image={placeholder}
+                            image={ymeetsimg}
 
-                        />  
+                        />
+                      
                     </div>
                 </div>
             </div>
@@ -195,7 +287,6 @@ function Page() {
 
             <h1 className='title'>Relevant Coursework</h1>
 
-            
             <ul className='title more-padding'>
                 <li>CPSC 201: Introduction to Computer Science</li>
                 <li>CPSC 223: Datastructures and Programming Techniques</li>
