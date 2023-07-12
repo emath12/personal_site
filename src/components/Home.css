@@ -11,23 +11,12 @@ body {
 
 
 
-@font-face {
-    font-family: Triforce;
-    src: url(/Users/emathieu/personal_projects/personal_site/Triforce.ttf);
-}
-
-@font-face {
-    font-family: Sheikah;
-    src: url(/Users/emathieu/personal_projects/personal_site/BotW_Sheikah.ttf);
-}
-
 .bold-on-hover:hover {
     font-weight: bolder;
 }
 
 .sheikah-span {
-    font-family: Sheikah;
-    color: white;
+  color: white;
 }
 
 .do-hover {
