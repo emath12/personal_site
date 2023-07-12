@@ -1,12 +1,15 @@
 body {
-    background: url(/Users/emathieu/personal_projects/personal_site/src/imgs/breath-wild.jpeg) no-repeat center center fixed; 
+    /* background: url(/Users/emathieu/personal_projects/personal_site/src/imgs/zeldabackground.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif; */
+    background-color: #082a4d;
 }
+
+
 
 @font-face {
     font-family: Triforce;
@@ -18,9 +21,13 @@ body {
     src: url(/Users/emathieu/personal_projects/personal_site/BotW_Sheikah.ttf);
 }
 
+.bold-on-hover:hover {
+    font-weight: bolder;
+}
+
 .sheikah-span {
     font-family: Sheikah;
-    color: black;
+    color: white;
 }
 
 .do-hover {
@@ -54,13 +61,13 @@ h2 {
 
 .skill-rack {
     font-style: italic;
-
-
 }
 
-.listed-card-text {
+ul {
+    margin: 20px;
+    margin-top: 0px;
+    padding-left: 0;
 }
-
 
 .two-grid {
     display: grid;
@@ -100,7 +107,7 @@ h2 {
     margin-right: 40px;
     margin-top: 30px;
     margin-bottom: 0px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
     color: black;
     padding: 20px;
     border: 2px solid black;
@@ -121,7 +128,7 @@ h2 {
 /* SECTION STYLING */
 
 .h-section-center {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     margin-top: 150px;
     justify-content: center;
     align-items: center;
@@ -189,7 +196,7 @@ h2 {
     overflow-wrap: break-word;
     display: block;
     overflow: auto;
-    margin: 20px;
+    margin: 30px;
     margin-left: 10px;
     margin-right: 10px;
     border-color: black;
@@ -282,22 +289,10 @@ opacity: 1; /* When the "show" class is added to the element, set opacity to 1 *
     }
 }
 
-
-.no-drop {
-    position: relative;
+.the-page-style {
+    margin: 20px;
 }
 
-.no-drop::after {
-    text-shadow: 0px 0px black;
-    content: "";
-    display: inline-block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Place the pseudo element right under the content */
-    top: 0;
-    left: 0;
-    background: linear-gradient(to top, LightGray 100%, transparent 100%);
-    animation-name: highlight;
-    animation-duration: 3s;
+h2 {
+    color : white;
 }

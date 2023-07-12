@@ -1,30 +1,21 @@
 import './NavBar.css'
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
-import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect, useRef } from 'react';
-import Chip from '@mui/material/Chip';
 
-
-function OurBar(props) {
+function OurBar() {
 
     return (
         <>
             <Navbar className='navbar-style-1'>   
                 <Nav className='ml-auto'>        
-                    <Nav.Link>Home</Nav.Link>
-                    <Nav.Link>About Me</Nav.Link>
-                    <Nav.Link>Resume</Nav.Link>
-                    <Nav.Link>Relevant Coursework</Nav.Link>
-                    <Nav.Link>Portfolio</Nav.Link>
-                    <Nav.Link>Contact Me</Nav.Link>
+                    <Nav.Link className="bold-on-hover" href="#home">Home</Nav.Link>
+                    <Nav.Link href="#about-me">About Me</Nav.Link>
+                    <Nav.Link href="#resume">Resume</Nav.Link>
+                    <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+                    <Nav.Link href="#relevant-coursework">Relevant Coursework</Nav.Link>
+                    <Nav.Link href="#contact-me">Contact Me</Nav.Link>
                 </Nav>    
-                <Nav className="ms-auto">
-                    {/* <Nav.Link className="set-right zelda-span">Koroks Found: {props.korok} / 10</Nav.Link> */}
-                </Nav>
             </Navbar>
         </>
       );

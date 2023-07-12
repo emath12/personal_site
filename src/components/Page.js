@@ -11,7 +11,6 @@ import Grid2 from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import background_img from "../imgs/The-Legend-Of-Zelda-Breath-Of-The-Wild-PNG-Transparent-Image.png"
 import korok_img from "../imgs/korok2.png"
 import placeholder from "../imgs/placeholder.png"
 import html_img from "../imgs/html_logo.png"
@@ -20,9 +19,10 @@ import mint_port from "../imgs/mintporfolio.png"
 function AboutMe() {
     return (
         <>
-            <h2>Yahaha! You found me!</h2>
+                <h2>Yahaha! You found me!</h2>
 
-            <div className='who-box'>
+            <div className='the-page-style'>
+
                 <Grid container spacing={2}>
                     <Grid item xs={7}>
                         <div className="title-content">
@@ -33,7 +33,6 @@ function AboutMe() {
                                 <br />
                             </h1> 
                             <br/>
-                            <button id="meet" type="button" className="btn btn-dark">Meet Me</button>
                             <br></br>
                             <br></br>
                             <br></br>
@@ -43,14 +42,8 @@ function AboutMe() {
                             <br></br>
                             <h1 className='sheikah-span'>Learn All</h1>
                         </div>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <img className='do-hover'
-                            alt="link from breath of the wild"
-                            src={background_img}
-                            style={{filter: "drop-shadow(10px 10px 4px black)"}}
-                            />
-                    </Grid>
+                    </Grid>   
+                                
                 </Grid>
             </div>
         </>
@@ -61,6 +54,8 @@ function Page() {
     return (  
         <>
             <OurBar />
+            
+            <a id="home"/>
 
             <AboutMe />
 
@@ -70,6 +65,7 @@ function Page() {
                 <div className="down-arrow"></div>
             </div>
 
+            <a id="about-me"/>
 
             <div className='h-section-center'>
                 <h4>
@@ -90,60 +86,65 @@ function Page() {
             </div>
 
             <br></br>
-
+            
+            <a id="resume" />
             <h1 className='title'>Experience</h1>
 
             <br></br>
 
             <ResumeCard 
                 position="Software Engineering Intern"
-                organizationName="Proctor & Gamble"
+                organizationName="Procter & Gamble"
                 duration="May 2023 - Present"
                 current={true}
-                description={["deescription", "description"]}
+                description={["Engineering a fullstack web application designed to solve an internal corperate inefficency."]}
             />
             <ResumeCard
                 position="Vice President"
                 organizationName="Yale Computer Society"
                 duration="May 2023 - Present"
                 current={true}
-                description={[""]}
+                description={["Elected in a landslide over opposition to direct the internal operations of the Yale Computer Society in the 2023-4 academic year."]}
             />
             <ResumeCard
-                position="Yale CS Departmental Student Advisory Committee Member"
-                organizationName="Yale DSAC"
+                position="Accelerate - Software Track Participant"
+                organizationName="IBM"
                 duration="May 2023 - Present"
-                description={["description"]}
                 current={true}
+                description={["Attending weekly, hands-on apprenticeship sessions to hone my industry skills in software engineering."]}
             />
             <ResumeCard
-                position="Undergraduate Research Assistant"
+                position="Research Assistant"
                 organizationName="Efficient Computing Lab"
                 duration="June 2022 - Jan 2023"
-                description={["description"]}
+                description={["Designed software applications on top of the experimental Theseus Operating System (OS) to measure and improve the network throughput of the OS’ 10 GbE ixgbe Network Driver.", "Programmed changes to the OS' driver transmission path in Rust that increased emulated throughput. My changes were adapted into the current version of the driver. Presented findings in a cumulative lab meeting."]}
             />
             <ResumeCard
                 position="Software Development Team Lead"
                 organizationName="Yale Computer Society"
-                duration="October 2022 - Present"
-                description={["description"]}
+                duration="October 2022 - August 2023"
+                description={["Construct strategy and assign tasks critical as a I lead a team of 15 undergraduate software developers.", "Review code, design, and program changes necessary to the stability and final release of product in React.js"]}
             />
-
             <ResumeCard
                 position="CS Teaching Mentor"
                 organizationName="Code Haven"
                 duration="Oct. 2021 - Dec. 2021"
-                description={["description"]}
+                description={["Taught middle schoolers the basics of CS through an extensive, semester long cirriculum"]}
             />
+
+            <a id="portfolio" />
   
             <div className='h-section'>
                 <br></br>
                 <div style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
                     <div className="two-grid">
                         <ProjectCard
-                            projectTitle="Dynamic Finance Portfolio"
-                            duration="January 2023 - April 2023 (anticipated)"
-                            description="The squarely linked list: a grid data structure written in Python"
+                            projectTitle="MintPortfolio"
+                            duration="January 2023 - April 2023"
+                            description="Principal developer of an app whose functionality mimics Google Finance, allowing users to create and save their own stock portfolios and compare their performance against the market. 
+                            Application served as the capstone to my full-stack web development class at Yale.
+                            
+                            "
                             skills={["In Progress", "Fullstack", "ReactJS", "Python", "SQLite", "Flask", "GitHub"]}
                             image={mint_port}
                         />
@@ -189,8 +190,10 @@ function Page() {
                     </div>
                 </div>
             </div>
+            
+            <a id="relevant-coursework" />
 
-            <h1 className='title'>Relevant Courses</h1>
+            <h1 className='title'>Relevant Coursework</h1>
 
             
             <ul className='title more-padding'>
@@ -203,6 +206,8 @@ function Page() {
                 <li>MATH 115: Calculus of Single Variable II</li>
                 <li>MATH 222: Linear Algebra with Applications (in progress)</li>
             </ul>
+
+            <a id="contact-me" />
 
             <Footer/>
         </>

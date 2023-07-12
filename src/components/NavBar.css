@@ -4,7 +4,7 @@
 }
 
 .navbar .nav-link {
-    color: black !important; 
+    color: white !important; 
     font-weight: 350;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .navbar-style-1 {
-    box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.25);
+    box-shadow: 3px 3px 8px rgba(5, 5, 5, 0.97);
     padding: 10px;
     min-width: 100%;
     margin-bottom: 20px;
@@ -23,4 +23,9 @@
     text-align: right;
     justify-content: end;
     
+}
+
+.white-box-style {
+    background-color: white;
+    float: right;
 }

@@ -17,6 +17,11 @@ const ResumeCard = (props) => {
                             skills={props.skills}
                         />                       
                     </div>
+                    <ul>
+                        {props.description.map((desc_item) => (
+                            <li>{desc_item}</li>
+                        ))}
+                    </ul>
                 </Card.Body>  
             </Card>
         </div>
