@@ -34,7 +34,7 @@ function AboutMe() {
                     <Grid item xs={7}>
                         <div className="title-content">
                             <h1 className='main-title'>
-                                My name is <span className="no-drop">Ethan Mathieu.</span>
+                                <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
                                 <br/>
                                 I'm studying Computer Science at <br/> Yale University.
                                 <br />
@@ -47,7 +47,7 @@ function AboutMe() {
                             <h6
                                 style={{color: "white", fontStyle: "italic"}}
                             >
-                                Simplistic Design • Excellent Performance • Clean Architecture
+                                Capable Design • Clean Architecture • Unyielding Performance
                             </h6>
                         </div>
                     </Grid>   
@@ -245,6 +245,9 @@ function Page() {
             <div className='h-section'>
                 <br></br>
                 <div style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
+                    
+                    <br/>
+                    <center><h3 style={{color: "#232426", fontStyle : "italic"}}>My Stuff</h3></center>
 
                     <div className="two-grid">
                         <ProjectCard
@@ -258,7 +261,9 @@ function Page() {
                         <ProjectCard
                             projectTitle="Weekify: Plan Your Week"
                             duration="MVP released in July 2022. Future versions in progress."
-                            description="Inspired by Gcal, Weekify allows you to add to-dos to a week-long schedule."
+                            description="Inspired by Google Calander, 
+                            Weekify allows you to add and remove to-dos to a week-long schedule to
+                            ensure that you don't miss the window of time you really need to be somewhere for!"
                             skills={["In Progress", "ReactJS", "GitHub"]}
                             image={WeekifyImg}
                         />
@@ -273,7 +278,7 @@ function Page() {
                         <ProjectCard
                             projectTitle="ymeets - yale scheduling made easy"
                             duration="In Progress"
-                            description="The squarely linked list: a grid data structure written in Python"
+                            description="Founding Software Development Team Lead for the y/cs projects ymeets."
                             skills={[""]}
                             image={ymeetsimg}
 
@@ -300,7 +305,10 @@ function Page() {
 
             <a id="contact-me" />
 
+            <p hidden>kaity :)</p>
             <Footer/>
+
+            
         </>
     )
     
