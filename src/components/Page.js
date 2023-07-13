@@ -271,7 +271,7 @@ function Page() {
                         <ProjectCard
                             projectTitle="Yale Undergraduate Art Gallery GUI"
                             duration="March 2022"
-                            description="The squarely linked list: a grid data structure written in Python"
+                            description="Graphical User Interface written using PyQT5 that allows for one to query a database of YUAG objects."
                             skills={[""]}
                             image={guiImg}
                         />
