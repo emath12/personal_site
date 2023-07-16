@@ -47,7 +47,7 @@ function AboutMe() {
                             <h6
                                 style={{color: "white", fontStyle: "italic"}}
                             >
-                                Capable Design • Clean Architecture • Unyielding Performance
+                                Functional Design • Clean Architecture • Unyielding Performance
                             </h6>
                         </div>
                     </Grid>   
