@@ -18,7 +18,7 @@ function OurBar() {
 
     return (
         <>
-            <Navbar className='navbar-style-1'>   
+            <Navbar fixed='top' className='navbar-style-1'>   
                 <Nav className='ml-auto'>        
                     <Nav.Link className="bold-on-hover" href="#home">Home</Nav.Link>
                     <Nav.Link onClick={onSPAClick} href="#about-me">About Me</Nav.Link>

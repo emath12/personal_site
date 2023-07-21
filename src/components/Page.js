@@ -81,7 +81,9 @@ function Page() {
             <OurBar />
             
             <a id="home"/>
-
+            <br/>
+            <br/>
+            <br/>
             <AboutMe />
 
             <div className="center-obj">
