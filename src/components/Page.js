@@ -150,7 +150,7 @@ function Page() {
                         "Designing an extract-transform-load process to support the fullstack software solution, which together will drive significant value due to saved time and the new metric analysis unlocked.",
                         "Collaborate through weekly workshops with the purchasing department to ensure new software meets their needs."
                         ]}
-                        skills={["NextJS", "GCP", "Python"]}
+                        skills={["NextJS", "GCP", "Python", "Figma"]}
                     />
                     </TimelineContent>
                 </TimelineItem>
