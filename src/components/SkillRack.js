@@ -11,7 +11,7 @@ function SkillRack(props) {
         Rust : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
         SQLite : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
         Python : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-        Figma : "ttps://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+        Figma : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
         Firebase : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
 
     };
