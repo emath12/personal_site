@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import Grid from '@mui/material/Grid'; // Grid version 1
-
+import SkillRack from './SkillRack';
 const ResumeCard = (props) => {
     return (
         <div className='resume-card do-hover'>   
@@ -17,35 +17,20 @@ const ResumeCard = (props) => {
                         border: "none",
                         borderTop: "2px solid black",
                     }}
-                    />
-                    <div className="dock">
-                        <SkillRack 
-                            skills={props.skills}
-                        />                       
-                    </div>
+                    />                  
                     <ul>
                         {props.description.map((desc_item) => (
                             <li>{desc_item}</li>
                         ))}
                     </ul>
+                    <SkillRack 
+                        skills={props.skills}
+                    />     
                 </Card.Body>  
             </Card>
         </div>
     );
 }
 
-const SkillRack = (props) => {
-    return (
-        <div className='skill-rack'>
-            {
-                props.skills && props.skills.map(skill => {
-                    return ( 
-                        <p>{skill}</p>
-                    )
-                })
-            }
-        </div>
-    );
-}
 
 export default ResumeCard

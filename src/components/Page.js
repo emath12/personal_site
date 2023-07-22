@@ -20,6 +20,8 @@ import TimelineOppositeContent, {
 import WeekifyImg from "../imgs/Weekify.png"
 import guiImg from "../imgs/gui.png"
 import ymeetsimg from "../imgs/ymeets.png"
+import SkillRack from './SkillRack';
+
 
 
 function AboutMe() {
@@ -29,7 +31,7 @@ function AboutMe() {
             <h2>Yahaha! You found me!</h2>
 
             <div className='the-page-style'>
-
+                <SkillRack />        
                 <Grid container spacing={2}>
                     <Grid item xs={7}>
                         <div className="title-content">
@@ -42,12 +44,11 @@ function AboutMe() {
                             <br/>
                             <br></br>
                             <br></br>
-                            <br></br>
-                              
+                            <br></br>  
                             <h6
                                 style={{color: "white", fontStyle: "italic"}}
                             >
-                                Functional Design • Clean Architecture • Unyielding Performance
+                                Functional Design • Clean Methodology • Unyielding Performance
                             </h6>
                         </div>
                     </Grid>   
@@ -149,6 +150,7 @@ function Page() {
                         "Designing an extract-transform-load process to support the fullstack software solution, which together will drive significant value due to saved time and the new metric analysis unlocked.",
                         "Collaborate through weekly workshops with the purchasing department to ensure new software meets their needs."
                         ]}
+                        skills={["NextJS", "GCP", "Python"]}
                     />
                     </TimelineContent>
                 </TimelineItem>
@@ -186,6 +188,7 @@ function Page() {
                         "Attending weekly, hands-on apprenticeship sessions to hone my industry skills in software engineering.",
                         "Intensive 7.4% acceptance rate program with weekly sessions focused on developing industry software skills."
                         ]}
+                        skills={["Express", "React"]}
                     />
                     </TimelineContent>
                 </TimelineItem>
@@ -204,6 +207,7 @@ function Page() {
                         "Programmed changes to experimental network driver’s transmission path that increased emulated throughput by as much as 50% in tests.",
                         "Changes were adapted into later iterations of the driver.",
                         ]}
+                        skills={["Rust"]}
                     />
                     </TimelineContent>
                 </TimelineItem>
@@ -222,6 +226,7 @@ function Page() {
                             "Develop high-level product roadmaps and software architecture strategies.",
                             "Steered 15 developers through the delivery of a group scheduling software prototype despite a truncated development timeline."
                             ]}
+                        skills={["React"]}
                     />
                     </TimelineContent>
                 </TimelineItem>
@@ -257,7 +262,7 @@ function Page() {
                             duration="January 2023 - April 2023"
                             description="Principal developer of an app whose functionality mimics Google Finance, allowing users to create and save their own stock portfolios and compare their performance against the market. 
                             Application served as the capstone to my full-stack web development class at Yale."
-                            skills={["In Progress", "Fullstack", "ReactJS", "Python", "SQLite", "Flask", "GitHub"]}
+                            skills={["React", "Python", "SQLite", "Flask"]}
                             image={mint_port}
                         />  
                         <ProjectCard
@@ -266,7 +271,7 @@ function Page() {
                             description="Inspired by Google Calander, 
                             Weekify allows you to add and remove to-dos to a week-long schedule to
                             ensure that you don't miss the window of time you really need to be somewhere for!"
-                            skills={["In Progress", "ReactJS", "GitHub"]}
+                            skills={["React"]}
                             image={WeekifyImg}
                         />
                     
@@ -274,14 +279,14 @@ function Page() {
                             projectTitle="Yale Undergraduate Art Gallery GUI"
                             duration="March 2022"
                             description="Graphical User Interface written using PyQT5 that allows for one to query a database of YUAG objects."
-                            skills={[""]}
+                            skills={["Python"]}
                             image={guiImg}
                         />
                         <ProjectCard
                             projectTitle="ymeets - yale scheduling made easy"
                             duration="In Progress"
                             description="Founding Software Development Team Lead for the y/cs projects ymeets."
-                            skills={[""]}
+                            skills={["React", "Firebase"]}
                             image={ymeetsimg}
 
                         />

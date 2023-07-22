@@ -1,4 +1,5 @@
 import Card from 'react-bootstrap/Card';
+import SkillRack from './SkillRack';
 
 const ProjectCard = (props) => {
     return (
@@ -11,6 +12,9 @@ const ProjectCard = (props) => {
                     <Card.Text>{props.duration}</Card.Text>
                     <Card.Text>{props.description}</Card.Text>
                 </Card.Body>
+                <SkillRack 
+                    skills={props.skills}
+                />
             </Card>
         </div>
     )

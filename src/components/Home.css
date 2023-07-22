@@ -86,8 +86,15 @@ h2 {
     grid-row-gap: 0px;
 }
 
-.skill-rack {
-    font-style: italic;
+.skill-rack-style {
+    display: flex; /* Display the icons in a row */
+    align-items: center; /* Center the icons vertically */
+    justify-content: flex-end; /* Align the icons to the right */
+    margin: 5px;
+}
+
+.skill-rack-style > img {
+    margin: 10px
 }
 
 ul {
