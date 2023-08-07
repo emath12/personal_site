@@ -114,6 +114,20 @@ ul {
     margin-right: 30px;
 }
 
+/* For larger screens, two columns */
+@media (min-width: 768px) {
+    .two-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* For smaller screens, one column */
+  @media (max-width: 767px) {
+    .two-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
 .title-content {
     padding: 20px;
     margin: 20px;

@@ -28,6 +28,8 @@ export default function Footer() {
                 </MDBBtn>
             </section>
 
+            <p><center><strong>Made by me using React.js :)</strong></center></p>
+
         </MDBContainer>
         </MDBFooter>
     </div>

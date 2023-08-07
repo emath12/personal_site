@@ -48,7 +48,7 @@ function AboutMe() {
                             <h6
                                 style={{color: "white", fontStyle: "italic"}}
                             >
-                                Functional Design • Clean Methodology • Unyielding Performance
+                                Curiosity • Knowledge • Possibility
                             </h6>
                         </div>
                     </Grid>   
@@ -180,15 +180,14 @@ function Page() {
                     </StyledTimelineSeparator>
                     <TimelineContent>
                     <ResumeCard
-                        position="Accelerate - Software Track Participant"
-                        organizationName="IBM"
-                        duration="May 2023 - Present"
-                        current={true}
+                        position="Research Assistant"
+                        organizationName="Efficient Computing Lab"
+                        duration="June 2022 - Jan 2023"
                         description={[
-                        "Attending weekly, hands-on apprenticeship sessions to hone my industry skills in software engineering.",
-                        "Intensive 7.4% acceptance rate program with weekly sessions focused on developing industry software skills."
+                        "Programmed changes to experimental network driver’s transmission path that increased emulated throughput by as much as 50% in tests.",
+                        "Changes were adapted into later iterations of the driver.",
                         ]}
-                        skills={["Express", "React"]}
+                        skills={["Rust"]}
                     />
                     </TimelineContent>
                 </TimelineItem>
@@ -200,14 +199,16 @@ function Page() {
                     </StyledTimelineSeparator>
                     <TimelineContent>
                     <ResumeCard
-                        position="Research Assistant"
-                        organizationName="Efficient Computing Lab"
-                        duration="June 2022 - Jan 2023"
+                        position="Accelerate - Software Track Participant"
+                        organizationName="IBM"
+                        duration="May 2023 - Present"
+                        current={false}
                         description={[
-                        "Programmed changes to experimental network driver’s transmission path that increased emulated throughput by as much as 50% in tests.",
-                        "Changes were adapted into later iterations of the driver.",
+                        "Attended weekly, hands-on apprenticeship sessions to hone my industry skills in software engineering.",
+                        "Intensive 7.4% acceptance rate program with weekly sessions focused on developing industry software skills.",
+                        "Earned badge indicating my skill in Software Development"
                         ]}
-                        skills={["Rust"]}
+                        skills={["Express", "React"]}
                     />
                     </TimelineContent>
                 </TimelineItem>
