@@ -12,7 +12,9 @@ function SkillRack(props) {
         SQLite : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
         Python : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
         Figma : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-        Firebase : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+        Firebase : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+        Tailwind : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+        TypeScript : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
 
     };
 

@@ -7,6 +7,7 @@ body {
     background-repeat: no-repeat;
     font-family: Helvetica, Arial, sans-serif; */
     background-color: #082b4dfc;
+    min-width: 1000px;
 }
 
 
@@ -250,7 +251,9 @@ ul {
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    height: fit-content
+    overflow: scroll;
+    height: 80vh;
+    
 }
 
 .project-content {

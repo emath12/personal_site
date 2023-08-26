@@ -21,6 +21,7 @@ import WeekifyImg from "../imgs/Weekify.png"
 import guiImg from "../imgs/gui.png"
 import ymeetsimg from "../imgs/ymeets.png"
 import SkillRack from './SkillRack';
+import YCSWebsiteImg from "../imgs/ycs-website.png"
 
 
 
@@ -48,7 +49,7 @@ function AboutMe() {
                             <h6
                                 style={{color: "white", fontStyle: "italic"}}
                             >
-                                Curiosity • Knowledge • Possibility
+                            I think building things is cool.
                             </h6>
                         </div>
                     </Grid>   
@@ -96,20 +97,22 @@ function Page() {
             <a id="about-me"/>
 
             <div className='h-section-center'>
-                <h4>
+                <h4 style={{margin: "30px"}}>
                     Hello! My name is Ethan Mathieu and I’m a sophomore at Yale majoring in Computer Science 
-                    and minoring in Statistics & Data Science. Thank you for taking the time to visit my website 
+                    and minoring in Data Science. Thank you for taking the time to visit my website 
                     and learn a little bit more about me!
                     <br/>
                     <br/>
                     I'm the son of two Haitian-American immigrants and possess a passion for learning how to build
                     cool things. I was drawn to CS due to a love for tinkering and uncovering ways to accomplish tasks and
-                    solve problems efficiently. 
+                    solve problems efficiently. I've built scalable web-apps, engineered OS improvements and designed products. 
+                    Working with other people, though, is the best part of the job though. 
                     <br/> 
                     <br/>
                     <br/>
                     I'm interested in software engineering, data scientist and technical research opportunities! Please
                     feel free to contact me with the socials at the bottom of my site.
+            
                 </h4>  
             </div>
 
@@ -143,7 +146,7 @@ function Page() {
                     <ResumeCard
                         position="Software Engineering Intern"
                         organizationName="Procter & Gamble"
-                        duration="May 2023 - Present"
+                        duration="May 2023 - Aug 2023"
                         current={true}
                         description={[
                         "Engineering a novel software solution built on a Google BigQuery, Python, and Next.js/Vue.js tech stack to reconcile millions of mismatched records across P&G’s enterprise databases.",
@@ -255,9 +258,17 @@ function Page() {
                 <div style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
                     
                     <br/>
-                    <center><h3 style={{color: "#232426", fontStyle : "italic"}}>My Stuff</h3></center>
+                    <center><h3 style={{color: "white", backgroundColor: "#082b4dfc", width: "25%", padding: "10px", borderRadius: "5px", fontStyle : "italic"}}>My Stuff</h3></center>
 
                     <div className="two-grid">
+                        <ProjectCard
+                            projectTitle="Yale Computer Society Website"
+                            duration="August 2023 - Present"
+                            description="Contributing developer to the Yale Computer Society Website. Implemented the homepage and events blog page 
+                            using React and TailwindCSS. Liased with 4+ team in order to launch and design project. View at www.yalecomputersociety.org"
+                            skills={["React", "TypeScript", "Tailwind"]}
+                            image={YCSWebsiteImg}
+                        />  
                         <ProjectCard
                             projectTitle="MintPortfolio"
                             duration="January 2023 - April 2023"
@@ -286,7 +297,7 @@ function Page() {
                         <ProjectCard
                             projectTitle="ymeets - yale scheduling made easy"
                             duration="In Progress"
-                            description="Founding Software Development Team Lead for the y/cs projects ymeets."
+                            description="Founding Software Development Team Lead for the y/cs projects ymeets. Implemented avaliability select calendar"
                             skills={["React", "Firebase"]}
                             image={ymeetsimg}
 
