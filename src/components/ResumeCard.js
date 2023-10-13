@@ -12,13 +12,9 @@ const ResumeCard = (props) => {
                     <br></br>
                     <span>{props.duration}</span>
                     <hr
-                    style={{
-                        height: "4px",
-                        border: "none",
-                        borderTop: "2px solid black",
-                    }}
+                        className='h-4 border-solid mt-2'
                     />                  
-                    <ul>
+                    <ul className='mt-3 list-disc'>
                         {props.description.map((desc_item) => (
                             <li>{desc_item}</li>
                         ))}

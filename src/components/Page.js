@@ -29,27 +29,21 @@ function AboutMe() {
     return (
         <>
             
-            <h2>Yahaha! You found me!</h2>
+            <h2 className='mt-20'>Yahaha! You found me!</h2>
 
-            <div className='the-page-style'>
+            <div className='m-20 font-robot font-medium'>
                 <SkillRack />        
                 <Grid container spacing={2}>
                     <Grid item xs={7}>
-                        <div className="title-content">
-                            <h1 className='main-title'>
+                        <div className="text-4xl">
+                            <h1 className='line-65 text-white'>
                                 <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
                                 <br/>
                                 I'm studying Computer Science at <br/> Yale University.
                                 <br />
                             </h1> 
-                            <br/>
-                            <br></br>
-                            <br></br>
-                            <br></br>  
-                            <h6
-                                style={{color: "white", fontStyle: "italic"}}
-                            >
-                            I think building things is cool.
+                            <h6 className='text-sm mt-3 italic text-white'>
+                            I think building things is cool!
                             </h6>
                         </div>
                     </Grid>   
@@ -81,24 +75,19 @@ function Page() {
     return (  
         <>
             <OurBar />
-            
             <a id="home"/>
-            <br/>
-            <br/>
-            <br/>
             <AboutMe />
 
             <div className="center-obj">
-                <br></br>
                 <div className="down-arrow">
                 </div>
             </div>
 
             <a id="about-me"/>
 
-            <div className='h-section-center'>
-                <h4 style={{margin: "30px"}}>
-                    Hello! My name is Ethan Mathieu and I’m a sophomore at Yale majoring in Computer Science 
+            <div className='bg-white justify-center items-center mt-72 flex'>
+                <h4 className='m-30 w-1/2 m-5 text-xl'>
+                    Hello! My name is Ethan Mathieu and I’m a Junior at Yale majoring in Computer Science 
                     and minoring in Data Science. Thank you for taking the time to visit my website 
                     and learn a little bit more about me!
                     <br/>
@@ -112,17 +101,16 @@ function Page() {
                     <br/>
                     I'm interested in software engineering, data scientist and technical research opportunities! Please
                     feel free to contact me with the socials at the bottom of my site.
-            
                 </h4>  
             </div>
 
             <br></br>
             
             <a id="resume" />
-            <h1 className='title'>Experience</h1>
-
-            <br></br>
-
+            <div className=' flow-root mt-10 mb-2 content-start'>
+            <h1 className='text-4xl p-4 bg-white border border-1 border-black ml-40 mr-40 mt-30 center'>Experience</h1>
+            </div>
+            <div cla>
             <StyledTimeline
               sx={{
                 [`& .${timelineOppositeContentClasses.root}`]: {
@@ -132,7 +120,7 @@ function Page() {
               }}
             >
                 <p
-                    style={{color: "white", fontStyle: "italic", marginLeft: "10px"}}
+                    className='text-white text-center italic ml-10'
                 >
                     "Life happens wherever you are, whether you make it or not." - Uncle Iroh
                 </p>
@@ -147,7 +135,7 @@ function Page() {
                         position="Software Engineering Intern"
                         organizationName="Procter & Gamble"
                         duration="May 2023 - Aug 2023"
-                        current={true}
+                        current={false}
                         description={[
                         "Engineering a novel software solution built on a Google BigQuery, Python, and Next.js/Vue.js tech stack to reconcile millions of mismatched records across P&G’s enterprise databases.",
                         "Designing an extract-transform-load process to support the fullstack software solution, which together will drive significant value due to saved time and the new metric analysis unlocked.",
@@ -168,7 +156,7 @@ function Page() {
                         position="Vice President"
                         organizationName="Yale Computer Society"
                         duration="May 2023 - Present"
-                        current={true}
+                        current={false}
                         description={[
                         "Elected in a landslide over opposition to direct the internal operations of the Yale Computer Society in the 2023-4 academic year.",
                         ]}
@@ -250,6 +238,7 @@ function Page() {
                     </TimelineContent>
                 </TimelineItem>
             </StyledTimeline>
+            </div>
     
             <a id="portfolio" />
   
@@ -258,9 +247,17 @@ function Page() {
                 <div style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
                     
                     <br/>
-                    <center><h3 style={{color: "white", backgroundColor: "#082b4dfc", width: "25%", padding: "10px", borderRadius: "5px", fontStyle : "italic"}}>My Stuff</h3></center>
+                    <center><h3 className='text-xl' style={{color: "white", backgroundColor: "#082b4dfc", width: "25%", padding: "10px", borderRadius: "5px", fontStyle : "italic"}}>My Stuff</h3></center>
 
                     <div className="two-grid">
+                        <ProjectCard
+                            projectTitle="ymeets - yale scheduling made easy"
+                            duration="In Progress"
+                            description="Founding Software Development Team Lead for the y/cs projects ymeets. Implemented avaliability select calendar"
+                            skills={["React", "Firebase"]}
+                            image={ymeetsimg}
+
+                        />
                         <ProjectCard
                             projectTitle="Yale Computer Society Website"
                             duration="August 2023 - Present"
@@ -294,14 +291,7 @@ function Page() {
                             skills={["Python"]}
                             image={guiImg}
                         />
-                        <ProjectCard
-                            projectTitle="ymeets - yale scheduling made easy"
-                            duration="In Progress"
-                            description="Founding Software Development Team Lead for the y/cs projects ymeets. Implemented avaliability select calendar"
-                            skills={["React", "Firebase"]}
-                            image={ymeetsimg}
-
-                        />
+                     
                       
                     </div>
                 </div>
@@ -309,9 +299,9 @@ function Page() {
             
             <a id="relevant-coursework" />
 
-            <h1 className='title'>Relevant Coursework</h1>
+            <h1 className='text-4xl p-4 bg-white border border-1 border-black ml-40 mr-40 mt-20 center'>Relevant Coursework</h1>
 
-            <ul className='title more-padding'>
+            <ul className='bg-white list-disc mt-10 more-padding'>
                 <li>CPSC 201: Introduction to Computer Science</li>
                 <li>CPSC 223: Datastructures and Programming Techniques</li>
                 <li>CPSC 202: Mathemtical Tools for Computer Science</li>
@@ -320,6 +310,10 @@ function Page() {
                 <li>CPSC 419: Introduction to Full-Stack Web Programming</li>
                 <li>MATH 115: Calculus of Single Variable II</li>
                 <li>MATH 222: Linear Algebra with Applications (in progress)</li>
+                <li>CPSC 327: Object-Oriented Programing (in progress)</li>
+                <li>CPSC 465: Theroy of Distributed Systems (in progress)</li>
+                <li>S&DS 230: Data Exploration & Analysis (in progress)</li>
+
             </ul>
 
             <a id="contact-me" />
