@@ -16,7 +16,7 @@ function OurBar() {
   }
 
   return (
-    <Navbar fixed="top" className="text-left navbar-style-1" collapseOnSelect expand="lg">
+    <Navbar fixed="top" className="navbar-style-1" collapseOnSelect expand="lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">

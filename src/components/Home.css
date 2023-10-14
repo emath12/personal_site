@@ -1,15 +1,7 @@
 body {
-    /* background: url(/Users/emathieu/personal_projects/personal_site/src/imgs/zeldabackground.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: Helvetica, Arial, sans-serif; */
     background-color: #082b4dfc;
     min-width: 1000px;
 }
-
 
 .no-drop {
     position: relative;

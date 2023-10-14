@@ -23,8 +23,6 @@ import ymeetsimg from "../imgs/ymeets.png"
 import SkillRack from './SkillRack';
 import YCSWebsiteImg from "../imgs/ycs-website.png"
 
-
-
 function AboutMe() {
     return (
         <>
@@ -36,7 +34,7 @@ function AboutMe() {
                 <Grid container spacing={2}>
                     <Grid item xs={7}>
                         <div className="text-4xl">
-                            <h1 className='line-65 text-white'>
+                            <h1 className='text-white leading-65'>
                                 <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
                                 <br/>
                                 I'm studying Computer Science at <br/> Yale University.
@@ -57,19 +55,19 @@ function AboutMe() {
 function Page() {  
     
     const StyledTimeline = styled(Timeline)({
-        marginRight: 'auto', // Align the Timeline to the left
+        marginRight: 'auto', 
     });
       
       const StyledTimelineSeparator = styled(TimelineSeparator)({
-        marginLeft: 0, // Align the TimelineSeparator to the left by removing left margin
+        marginLeft: 0, 
       });
       
       const StyledTimelineConnector = styled(TimelineConnector)({
-        backgroundColor: '#bbb', // Set the color for the TimelineConnector lines
+        backgroundColor: '#bbb',
       });
       
       const StyledTimelineDot = styled(TimelineDot)({
-        borderColor: '#bbb', // Set the color for the TimelineDot borders
+        borderColor: '#bbb',
       });
     
     return (  
@@ -88,26 +86,33 @@ function Page() {
             <div className='bg-white justify-center items-center mt-72 flex'>
                 <h4 className='m-30 w-1/2 m-5 text-xl'>
                     Hello! My name is Ethan Mathieu and I’m a Junior at Yale majoring in Computer Science 
-                    and minoring in Data Science. Thank you for taking the time to visit my website 
-                    and learn a little bit more about me!
+                    and minoring in Data Science. 
                     <br/>
                     <br/>
-                    I'm the son of two Haitian-American immigrants and possess a passion for learning how to build
-                    cool things. I was drawn to CS due to a love for tinkering and uncovering ways to accomplish tasks and
-                    solve problems efficiently. I've built scalable web-apps, engineered OS improvements and designed products. 
-                    Working with other people, though, is the best part of the job though. 
+                    I'm the son of two Haitian-American immigrants. I was drawn to engineering
+                    due to a love for tinkering and uncovering ways to accomplish tasks and
+                    solve problems efficiently. Over the years, I've learned that data tells a story
+                    and software gives us the capability to convert that into action and meaning.
+                    
+                    I've built scalable web-apps, engineered custom OS improvements and designed products. 
+                    Working with other people, though, is the best part of the job of the job for me. 
                     <br/> 
                     <br/>
+                    
+                    <strong>I'm interested in software engineering, data scientist and technical research opportunities, on or off cycle! 
+                    </strong>
+                 
                     <br/>
-                    I'm interested in software engineering, data scientist and technical research opportunities! Please
-                    feel free to contact me with the socials at the bottom of my site.
+                    <br/>
+                    Please feel free to contact me with the socials at the bottom of my site; I always reply within
+                    24 hours unless on break. And while you're here, check out some of the things I've done.
                 </h4>  
             </div>
 
             <br></br>
             
             <a id="resume" />
-            <div className=' flow-root mt-10 mb-2 content-start'>
+            <div className='flow-root mt-10 mb-2 content-start'>
             <h1 className='text-4xl p-4 bg-white border border-1 border-black ml-40 mr-40 mt-30 center'>Experience</h1>
             </div>
             <div cla>
