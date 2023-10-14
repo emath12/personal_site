@@ -142,9 +142,9 @@ function Page() {
                         duration="May 2023 - Aug 2023"
                         current={false}
                         description={[
-                        "Engineering a novel software solution built on a Google BigQuery, Python, and Next.js/Vue.js tech stack to reconcile millions of mismatched records across P&G’s enterprise databases.",
-                        "Designing an extract-transform-load process to support the fullstack software solution, which together will drive significant value due to saved time and the new metric analysis unlocked.",
-                        "Collaborate through weekly workshops with the purchasing department to ensure new software meets their needs."
+                        "Engineered a full stack product built on a Next.js (React) frontend with a multi-threaded Python backend and BigQuery cloud database that communicates through a FastAPI.",
+                        "The product leverages a self-designed system utilizing parent-pointing trees that allows employees to map related ad spend records to each other, unlocking novel data management on millions of data records.",
+                        "Collaborated with stakeholders to generalize and deploy my product into the digital solutions hub for broader employee use, expanding beyond the initial project scope."
                         ]}
                         skills={["NextJS", "GCP", "Python", "Figma"]}
                     />
@@ -163,7 +163,7 @@ function Page() {
                         duration="May 2023 - Present"
                         current={false}
                         description={[
-                        "Elected in a landslide over opposition to direct the internal operations of the Yale Computer Society in the 2023-4 academic year.",
+                        "Architected and led bold internal restructuring plan that led to the creation of two new development projects, a new beginner-friendly software engineering program and 150% more club applicants."
                         ]}
                     />
                     </TimelineContent>
@@ -197,7 +197,7 @@ function Page() {
                     <ResumeCard
                         position="Accelerate - Software Track Participant"
                         organizationName="IBM"
-                        duration="May 2023 - Present"
+                        duration="May 2023 - July 2023"
                         current={false}
                         description={[
                         "Attended weekly, hands-on apprenticeship sessions to hone my industry skills in software engineering.",
@@ -220,9 +220,9 @@ function Page() {
                         organizationName="Yale Computer Society"
                         duration="October 2022 - August 2023"
                         description={[
-                            "Develop high-level product roadmaps and software architecture strategies.",
-                            "Steered 15 developers through the delivery of a group scheduling software prototype despite a truncated development timeline."
-                            ]}
+                            "Led a team of 15 through the design and development of a novel full stack software product that eases finding a common time and place to meet on campus.",
+                            "Developed the principal frontend component, an availability select calendar, that allows users to select dates and times they can meet."
+                        ]}
                         skills={["React"]}
                     />
                     </TimelineContent>

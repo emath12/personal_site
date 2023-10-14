@@ -8,15 +8,15 @@ const ResumeCard = (props) => {
                 {props.current ? <Card.Header style={{backgroundColor: "lightgray"}}>Current Position</Card.Header> : null}
                 <Card.Body>
                     <Card.Title style={{ fontWeight: "bold" }}>{props.position}</Card.Title>
-                    <span>{props.organizationName}</span>
+                    <span className='italic mb-2'>{props.organizationName}</span>
                     <br></br>
-                    <span>{props.duration}</span>
+                    <span className='mt-1'>{props.duration}</span>
                     <hr
                         className='h-4 border-solid mt-2'
                     />                  
                     <ul className='mt-3 list-disc'>
                         {props.description.map((desc_item) => (
-                            <li>{desc_item}</li>
+                            <li className='mb-2'>{desc_item}</li>
                         ))}
                     </ul>
                     <SkillRack 
