@@ -322,8 +322,6 @@ function Page() {
             </ul>
 
             <a id="contact-me" />
-
-            <p hidden>kaity :)</p>
             <Footer/>
 
             
