@@ -82,8 +82,8 @@ function AboutMe() {
       </div>
 
             <div className='m-20 font-robot font-medium'>
-                <div className="text-4xl">
-                    <h1 className='text-white leading-65'>
+                <div className="lg:text-4xl text-xl">
+                    <h1 className='text-white lg:leading-65 leading-10'>
                         <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
                         <br/>
                         I'm studying Computer & Data Science at <br/> Yale University.
@@ -118,7 +118,7 @@ function Page() {
 
 
             <div className='bg-white justify-center items-center mt-72 flex'>
-                <h4 className='m-30 w-1/2 m-5 text-xl'>
+                <h4 className='lg:m-30 w-1/2 m-5 text-xl'>
                     Hello! My name is Ethan Mathieu and I’m a Junior at Yale majoring in Computer Science 
                     and minoring in Data Science. 
                     <br/>
