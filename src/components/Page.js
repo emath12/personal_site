@@ -80,7 +80,7 @@ function AboutMe() {
           {isPlaying ? <FaPause size={30} color="white" /> : <FaPlay size={30} color="white" />}
         </button>
         <br></br>
-        {isPlaying && <a href="https://triangle-strategy.fandom.com/wiki/Benedict_Pascal"><p className='text-white ml-3 bg-gray-700 p-2 rounded-lg opacity-90'>Benedict's Path</p></a>}
+        {isPlaying && <a href="https://triangle-strategy.fandom.com/wiki/Benedict_Pascal"><p className='text-white ml-3 bg-gray-700 p-2 rounded-lg opacity-90 drop-shadow-lg'>Benedict's Path</p></a>}
       </div>
 
             <div className='m-20 font-robot font-medium'>
@@ -151,7 +151,7 @@ function Page() {
                     <p className='text-sm italic mr-4'>More stuff is on my GitHub, but these are live! :)</p>
                     
                     <a target="_blank" href="https://ymeets.com">
-                        <div className='hover:scale-105 rounded-lg p-4 text-black font-bold mb-4 mt-4'
+                        <div className='hover:scale-105 drop-shadow-lg rounded-lg p-4 text-black font-bold mb-4 mt-4'
                             style={{
                                 backgroundImage: `url(${ymeetsimg})`,
                                 backgroundSize: 'cover',
@@ -171,7 +171,7 @@ function Page() {
                         backgroundPosition: 'center',
                         backgroundColor: 'rgba(0, 0, 0, 0.3)', // Adjust the alpha channel (0.5 for 50% opacity)
 
-                      }} className='rounded-lg hover:scale-105 p-4 text-white font-bold mb-4 mt-4'>Yale Computer Society Website</div></a>
+                      }} className='rounded-lg drop-shadow-lg hover:scale-105 p-4 text-white font-bold mb-4 mt-4'>Yale Computer Society Website</div></a>
                     <br />
 
                     <div className='flex justify-center items-center'>
