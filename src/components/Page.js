@@ -91,11 +91,7 @@ function AboutMe() {
                         I'm studying Computer & Data Science at <br/> Yale University.
                         <br />
                     </h1> 
-                    <h6 className='text-sm mt-3 italic text-white'>
-                    I think building things is cool!
-                    </h6>
-
-        
+                   
                     <div className="hidden">
                         <YouTube videoId={videoId} opts={opts} onReady={(e) => (playerRef.current = e.target)} />
 
