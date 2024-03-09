@@ -8,7 +8,12 @@ const ProjectCard = (props) => {
                 {props.current ? <Card.Header style={{backgroundColor: "lightgray"}}>Current Position</Card.Header> : null}
                 <img style={{maxHeight: 400, maxWidth: 2000}} src={props.image}/>
                 <Card.Body>
-                    <Card.Title><strong>{props.projectTitle}</strong></Card.Title>
+                    {props.link ? 
+                        <a href={props.link} className="underline" target="_blank" rel="noopener noreferrer">
+                            <Card.Title><strong>{props.projectTitle}</strong></Card.Title>
+                        </a> : 
+                            <Card.Title><strong>{props.projectTitle}</strong></Card.Title>
+                    }   
                     <Card.Text>{props.duration}</Card.Text>
                     <Card.Text>{props.description}</Card.Text>
                 </Card.Body>

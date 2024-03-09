@@ -22,66 +22,100 @@ import guiImg from "../imgs/gui.png"
 import ymeetsimg from "../imgs/ymeets.png"
 import SkillRack from './SkillRack';
 import YCSWebsiteImg from "../imgs/ycs-website.png"
+import resumePDF from "../EthanMathieu_Feb2024Resume.pdf"
+import { IoIosPaper } from "react-icons/io";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaLink } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+import YouTube from 'react-youtube';
+import { useRef } from 'react';
+import { useState } from 'react';
+import { FaPlay } from "react-icons/fa";
+import { FaPause } from "react-icons/fa";
 
 function AboutMe() {
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    const videoId = 'AMnWZN5bqfw'; // Replace with the actual YouTube video ID
+    const playerRef = useRef(null);
+
+    const opts = {
+     
+        playerVars: {
+        // Autoplay the video
+        autoplay: 1,
+        },
+    };
+
+    const onReady = (event) => {
+        playerRef.current = event.target;
+      };
+    
+      const togglePlayPause = () => {
+        if (playerRef.current) {
+          const playerState = playerRef.current.getPlayerState();
+    
+          if (playerState === 1) {
+            // If the player is currently playing, pause it
+            playerRef.current.pauseVideo();
+          } else if (playerState === 2 || playerState === 5) {
+            // If the player is paused or cued, play it from the beginning
+            playerRef.current.seekTo(0);
+            playerRef.current.playVideo();
+          }
+    
+          setIsPlaying(!isPlaying);
+        }
+      };
     return (
         <>
             
-            <h2 className='mt-20'>Yahaha! You found me!</h2>
+            <div className="flex items-center justify-between pr-4">
+        <a target="_blank" href="https://www.youtube.com/watch?v=zw47_q9wbBE">
+          <h2 className="opacity-5 underline">Yahaha! You found me!</h2>
+        </a>
+
+        <button onClick={togglePlayPause} className="ml-auto">
+          {isPlaying ? <FaPause size={30} color="white" /> : <FaPlay size={30} color="white" />}
+        </button>
+      </div>
 
             <div className='m-20 font-robot font-medium'>
-                <SkillRack />        
-                <Grid container spacing={2}>
-                    <Grid item xs={7}>
-                        <div className="text-4xl">
-                            <h1 className='text-white leading-65'>
-                                <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
-                                <br/>
-                                I'm studying Computer Science at <br/> Yale University.
-                                <br />
-                            </h1> 
-                            <h6 className='text-sm mt-3 italic text-white'>
-                            I think building things is cool!
-                            </h6>
-                        </div>
-                    </Grid>   
-                                
-                </Grid>
+                <div className="text-4xl">
+                    <h1 className='text-white leading-65'>
+                        <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
+                        <br/>
+                        I'm studying Computer & Data Science at <br/> Yale University.
+                        <br />
+                    </h1> 
+                    <h6 className='text-sm mt-3 italic text-white'>
+                    I think building things is cool!
+                    </h6>
+
+                    <div className="hidden">
+                        <YouTube videoId={videoId} opts={opts} onReady={(e) => (playerRef.current = e.target)} />
+
+                    </div>
+                    
+                
+                </div>
             </div>
         </>
     )
 }
 
 function Page() {  
-    
-    const StyledTimeline = styled(Timeline)({
-        marginRight: 'auto', 
-    });
-      
-      const StyledTimelineSeparator = styled(TimelineSeparator)({
-        marginLeft: 0, 
-      });
-      
-      const StyledTimelineConnector = styled(TimelineConnector)({
-        backgroundColor: '#bbb',
-      });
-      
-      const StyledTimelineDot = styled(TimelineDot)({
-        borderColor: '#bbb',
-      });
-    
+
     return (  
         <>
-            <OurBar />
-            <a id="home"/>
             <AboutMe />
 
             <div className="center-obj">
-                <div className="down-arrow">
-                </div>
+                <div className="down-arrow"></div>
             </div>
 
-            <a id="about-me"/>
+
 
             <div className='bg-white justify-center items-center mt-72 flex'>
                 <h4 className='m-30 w-1/2 m-5 text-xl'>
@@ -99,231 +133,49 @@ function Page() {
                     <br/> 
                     <br/>
                     
-                    <strong>I'm interested in software engineering, data scientist and technical research opportunities, on or off cycle! 
-                    </strong>
+                    <strong>I'm interested New Grad & Fall 2024 Software Engineering opportunties.</strong>
                  
                     <br/>
                     <br/>
                     Please feel free to contact me with the socials at the bottom of my site; I always reply within
-                    24 hours unless on break. And while you're here, check out some of the things I've done.
+                    24 hours unless on break. And while you're here, check out some of the things I've done!
+                    
+                    <br/>
+                    <br/>
+
+                    <div className='flex justify-center items-center'>
+                        <div className='flex flex-row'>
+                            <a target='_blank' rel='noopener noreferrer' href={resumePDF} className='text-center underline font-bold'>
+                            <IoIosPaper 
+                                size={60}
+                                className='mr-2'
+                            />
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/ethan-mathieu/">
+                            <FaLinkedin 
+                                size={60}
+                                className='mr-2'
+                            />
+                            </a>
+                            <a target="_blank" href="https://github.com/emath12">
+                                <FaGithubSquare
+                                    size={60}
+                                    className='mr-2'
+                                />
+                            </a>
+                            <a href="mailto:ethan.mathieu@yale.edu">
+                                <MdOutlineEmail 
+                                    size={60}
+                                    className='mr-2'
+                                />
+
+                            </a>
+
+                        </div>
+                    </div>
                 </h4>  
             </div>
 
-            <br></br>
-            
-            <a id="resume" />
-            <div className='flow-root mt-10 mb-2 content-start'>
-            <h1 className='text-4xl p-4 bg-white border border-1 border-black ml-40 mr-40 mt-30 center'>Experience</h1>
-            </div>
-            <div cla>
-            <StyledTimeline
-              sx={{
-                [`& .${timelineOppositeContentClasses.root}`]: {
-                  flex: 0.00625,
-                },
-
-              }}
-            >
-                <p
-                    className='text-white text-center italic ml-10'
-                >
-                    "Life happens wherever you are, whether you make it or not." - Uncle Iroh
-                </p>
-                <TimelineItem>
-                    <TimelineOppositeContent color="textSecondary" />
-                    <StyledTimelineSeparator>
-                    <StyledTimelineDot />
-                    <StyledTimelineConnector />
-                    </StyledTimelineSeparator>
-                    <TimelineContent>
-                    <ResumeCard
-                        position="Software Engineering Intern"
-                        organizationName="Procter & Gamble"
-                        duration="May 2023 - Aug 2023"
-                        current={false}
-                        description={[
-                        "Engineered a full stack product built on a Next.js (React) frontend with a multi-threaded Python backend and BigQuery cloud database that communicates through a FastAPI.",
-                        "The product leverages a self-designed system utilizing parent-pointing trees that allows employees to map related ad spend records to each other, unlocking novel data management on millions of data records.",
-                        "Collaborated with stakeholders to generalize and deploy my product into the digital solutions hub for broader employee use, expanding beyond the initial project scope."
-                        ]}
-                        skills={["NextJS", "GCP", "Python", "Figma"]}
-                    />
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent color="textSecondary" />
-                    <StyledTimelineSeparator>
-                    <StyledTimelineDot />
-                    <StyledTimelineConnector />
-                    </StyledTimelineSeparator>
-                    <TimelineContent>
-                    <ResumeCard
-                        position="Vice President"
-                        organizationName="Yale Computer Society"
-                        duration="May 2023 - Present"
-                        current={false}
-                        description={[
-                        "Architected and led bold internal restructuring plan that led to the creation of two new development projects, a new beginner-friendly software engineering program and 150% more club applicants."
-                        ]}
-                    />
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent color="textSecondary" />
-                    <StyledTimelineSeparator>
-                    <StyledTimelineDot />
-                    <StyledTimelineConnector />
-                    </StyledTimelineSeparator>
-                    <TimelineContent>
-                    <ResumeCard
-                        position="Research Assistant"
-                        organizationName="Efficient Computing Lab"
-                        duration="June 2022 - Jan 2023"
-                        description={[
-                        "Programmed changes to experimental network driver’s transmission path that increased emulated throughput by as much as 50% in tests.",
-                        "Changes were adapted into later iterations of the driver.",
-                        ]}
-                        skills={["Rust"]}
-                    />
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent color="textSecondary" />
-                    <StyledTimelineSeparator>
-                    <StyledTimelineDot />
-                    <StyledTimelineConnector />
-                    </StyledTimelineSeparator>
-                    <TimelineContent>
-                    <ResumeCard
-                        position="Accelerate - Software Track Participant"
-                        organizationName="IBM"
-                        duration="May 2023 - July 2023"
-                        current={false}
-                        description={[
-                        "Attended weekly, hands-on apprenticeship sessions to hone my industry skills in software engineering.",
-                        "Intensive 7.4% acceptance rate program with weekly sessions focused on developing industry software skills.",
-                        "Earned badge indicating my skill in Software Development"
-                        ]}
-                        skills={["Express", "React"]}
-                    />
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent color="textSecondary" />
-                    <StyledTimelineSeparator>
-                    <StyledTimelineDot />
-                    <StyledTimelineConnector />
-                    </StyledTimelineSeparator>
-                    <TimelineContent>
-                    <ResumeCard
-                        position="Software Development Team Lead"
-                        organizationName="Yale Computer Society"
-                        duration="October 2022 - August 2023"
-                        description={[
-                            "Led a team of 15 through the design and development of a novel full stack software product that eases finding a common time and place to meet on campus.",
-                            "Developed the principal frontend component, an availability select calendar, that allows users to select dates and times they can meet."
-                        ]}
-                        skills={["React"]}
-                    />
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent color="textSecondary" />
-                    <StyledTimelineSeparator>
-                    <StyledTimelineDot />
-                    <StyledTimelineConnector />
-                    </StyledTimelineSeparator>
-                    <TimelineContent>
-                    <ResumeCard
-                        position="CS Teaching Mentor"
-                        organizationName="Code Haven"
-                        duration="Oct. 2021 - Dec. 2021"
-                        description={["Taught middle schoolers the basics of CS through an extensive, semester long cirriculum"]}
-                    />
-                    </TimelineContent>
-                </TimelineItem>
-            </StyledTimeline>
-            </div>
-    
-            <a id="portfolio" />
-  
-            <div className='h-section'>
-                <br></br>
-                <div style={{backgroundColor: "rgba(255, 255, 255, 0.8)"}}>
-                    
-                    <br/>
-                    <center><h3 className='text-xl' style={{color: "white", backgroundColor: "#082b4dfc", width: "25%", padding: "10px", borderRadius: "5px", fontStyle : "italic"}}>My Stuff</h3></center>
-
-                    <div className="two-grid">
-                        <ProjectCard
-                            projectTitle="ymeets - yale scheduling made easy"
-                            duration="In Progress"
-                            description="Founding Software Development Team Lead for the y/cs projects ymeets. Implemented avaliability select calendar"
-                            skills={["React", "Firebase"]}
-                            image={ymeetsimg}
-
-                        />
-                        <ProjectCard
-                            projectTitle="Yale Computer Society Website"
-                            duration="August 2023 - Present"
-                            description="Contributing developer to the Yale Computer Society Website. Implemented the homepage and events blog page 
-                            using React and TailwindCSS. Liased with 4+ team in order to launch and design project. View at www.yalecomputersociety.org"
-                            skills={["React", "TypeScript", "Tailwind"]}
-                            image={YCSWebsiteImg}
-                        />  
-                        <ProjectCard
-                            projectTitle="MintPortfolio"
-                            duration="January 2023 - April 2023"
-                            description="Principal developer of an app whose functionality mimics Google Finance, allowing users to create and save their own stock portfolios and compare their performance against the market. 
-                            Application served as the capstone to my full-stack web development class at Yale."
-                            skills={["React", "Python", "SQLite", "Flask"]}
-                            image={mint_port}
-                        />  
-                        <ProjectCard
-                            projectTitle="Weekify: Plan Your Week"
-                            duration="MVP released in July 2022. Future versions in progress."
-                            description="Inspired by Google Calander, 
-                            Weekify allows you to add and remove to-dos to a week-long schedule to
-                            ensure that you don't miss the window of time you really need to be somewhere for!"
-                            skills={["React"]}
-                            image={WeekifyImg}
-                        />
-                    
-                        <ProjectCard
-                            projectTitle="Yale Undergraduate Art Gallery GUI"
-                            duration="March 2022"
-                            description="Graphical User Interface written using PyQT5 that allows for one to query a database of YUAG objects."
-                            skills={["Python"]}
-                            image={guiImg}
-                        />
-                     
-                      
-                    </div>
-                </div>
-            </div>
-            
-            <a id="relevant-coursework" />
-
-            <h1 className='text-4xl p-4 bg-white border border-1 border-black ml-40 mr-40 mt-20 center'>Relevant Coursework</h1>
-
-            <ul className='bg-white list-disc mt-10 more-padding'>
-                <li>CPSC 201: Introduction to Computer Science</li>
-                <li>CPSC 223: Datastructures and Programming Techniques</li>
-                <li>CPSC 202: Mathemtical Tools for Computer Science</li>
-                <li>CPSC 323: Systems Programming and Computer Organization</li>
-                <li>CPSC 365: Algorithms</li>
-                <li>CPSC 419: Introduction to Full-Stack Web Programming</li>
-                <li>MATH 115: Calculus of Single Variable II</li>
-                <li>MATH 222: Linear Algebra with Applications (in progress)</li>
-                <li>CPSC 327: Object-Oriented Programing (in progress)</li>
-                <li>CPSC 465: Theroy of Distributed Systems (in progress)</li>
-                <li>S&DS 230: Data Exploration & Analysis (in progress)</li>
-
-            </ul>
-
-            <a id="contact-me" />
-
-            <p hidden>kaity :)</p>
             <Footer/>
 
             

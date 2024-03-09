@@ -11,7 +11,7 @@ const ResumeCard = (props) => {
                     <span className='italic mb-2'>{props.organizationName}</span>
                     <br></br>
                     <span className='mt-1'>{props.duration}</span>
-                    <hr
+                    <hr 
                         className='h-4 border-solid mt-2'
                     />                  
                     <ul className='mt-3 list-disc'>
@@ -19,6 +19,7 @@ const ResumeCard = (props) => {
                             <li className='mb-2'>{desc_item}</li>
                         ))}
                     </ul>
+                   
                     <SkillRack 
                         skills={props.skills}
                     />     
