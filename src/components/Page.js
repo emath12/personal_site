@@ -44,7 +44,7 @@ function AboutMe() {
      
         playerVars: {
         // Autoplay the video
-        autoplay: 1,
+        autoplay:0,
         },
     };
 
