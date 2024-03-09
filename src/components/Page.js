@@ -79,10 +79,12 @@ function AboutMe() {
         <button onClick={togglePlayPause} className="ml-auto">
           {isPlaying ? <FaPause size={30} color="white" /> : <FaPlay size={30} color="white" />}
         </button>
+        <br></br>
+        {isPlaying && <a href="https://triangle-strategy.fandom.com/wiki/Benedict_Pascal"><p className='text-white ml-3 bg-gray-700 p-2 rounded-lg opacity-90'>Benedict's Path</p></a>}
       </div>
 
             <div className='m-20 font-robot font-medium'>
-                <div className="lg:text-4xl text-xl">
+                <div className="lg:text-4xl text-3xl">
                     <h1 className='text-white lg:leading-65 leading-10'>
                         <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
                         <br/>
@@ -93,6 +95,7 @@ function AboutMe() {
                     I think building things is cool!
                     </h6>
 
+        
                     <div className="hidden">
                         <YouTube videoId={videoId} opts={opts} onReady={(e) => (playerRef.current = e.target)} />
 
@@ -111,14 +114,15 @@ function Page() {
         <>
             <AboutMe />
 
+            <div className='sm:visible'>
             <div className="center-obj">
                 <div className="down-arrow"></div>
             </div>
+            </div>
 
 
-
-            <div className='bg-white justify-center items-center mt-72 flex'>
-                <h4 className='lg:m-30 w-1/2 m-5 text-xl'>
+            <div className='bg-white lg:justify-center md:justify-center w-full lg:items-center md:items-center mt-72 flex'>
+                <h4 className='lg:m-30 lg:w-1/2 lg:m-5 m-3 lg:text-xl text-lg'>
                     Hello! My name is Ethan Mathieu and I’m a Junior at Yale majoring in Computer Science 
                     and minoring in Data Science. 
                     <br/>
@@ -142,6 +146,33 @@ function Page() {
                     
                     <br/>
                     <br/>
+
+                    <h1 className='text-xl font-bold mr-4 underline'>Project Headliners</h1>
+                    <p className='text-sm italic mr-4'>More stuff is on my GitHub, but these are live! :)</p>
+                    
+                    <a target="_blank" href="https://ymeets.com">
+                        <div className='hover:scale-105 rounded-lg p-4 text-black font-bold mb-4 mt-4'
+                            style={{
+                                backgroundImage: `url(${ymeetsimg})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                backgroundColor: 'rgba(0, 0, 0, 0.3)', // Adjust the alpha channel (0.5 for 50% opacity)
+
+                              }}
+                            
+                        >
+                            ymeets - yale scheduling made easy
+                        </div></a>
+                    <a target="_blank" href="https://www.yalecomputersociety.org"
+                    
+                    ><div                       style={{
+                        backgroundImage: `url(${YCSWebsiteImg})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundColor: 'rgba(0, 0, 0, 0.3)', // Adjust the alpha channel (0.5 for 50% opacity)
+
+                      }} className='rounded-lg hover:scale-105 p-4 text-white font-bold mb-4 mt-4'>Yale Computer Society Website</div></a>
+                    <br />
 
                     <div className='flex justify-center items-center'>
                         <div className='flex flex-row'>
