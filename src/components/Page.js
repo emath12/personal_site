@@ -82,12 +82,12 @@ function AboutMe() {
             {isPlaying && <a href="https://triangle-strategy.fandom.com/wiki/Benedict_Pascal"><p className='text-white ml-3 bg-gray-700 p-2 rounded-lg opacity-90 drop-shadow-lg'>Benedict's Path</p></a>}
         </div>
 
-        <div className='lg:m-20 m-5 w-full font-medium'>
-            <div className="lg:text-4xl text-2xl">
+        <div className="m-8 lg:m-20 md:m-20 sm:m-20 w-full font-medium">
+            <div className="lg:text-4xl text-xl">
                 <h1 className='text-white lg:leading-65 leading-10'>
                     <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
                     <br/>
-                    I'm studying Computer & Data Science at <br/> Yale University.
+                    I'm studying Computer & Data Science <br/> at Yale University.
                     <br />
                 </h1> 
                 
@@ -106,7 +106,7 @@ function AboutMe() {
 function Page() {  
 
     return (  
-        <div >
+        <div>
             <AboutMe />
 
             <div className='hidden lg:block'>
