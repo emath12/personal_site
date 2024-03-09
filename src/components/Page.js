@@ -71,11 +71,10 @@ function AboutMe() {
     return (
         <>
             
-            <div className="flex items-center justify-between pr-4">
-        <a target="_blank" href="https://www.youtube.com/watch?v=zw47_q9wbBE">
-          <h2 className="opacity-5 underline">Yahaha! You found me!</h2>
-        </a>
-
+        <div className="flex items-center justify-between pr-4 w-screen">
+            <a target="_blank" href="https://www.youtube.com/watch?v=zw47_q9wbBE">
+            <h2 className="opacity-5 underline">Yahaha! You found me!</h2>
+            </a>
         <button onClick={togglePlayPause} className="ml-auto">
           {isPlaying ? <FaPause size={30} color="white" /> : <FaPlay size={30} color="white" />}
         </button>
@@ -83,8 +82,8 @@ function AboutMe() {
         {isPlaying && <a href="https://triangle-strategy.fandom.com/wiki/Benedict_Pascal"><p className='text-white ml-3 bg-gray-700 p-2 rounded-lg opacity-90 drop-shadow-lg'>Benedict's Path</p></a>}
       </div>
 
-            <div className='m-20 font-robot font-medium'>
-                <div className="lg:text-4xl text-3xl">
+            <div className='lg:m-20 m-5 font-robot w-screen font-medium'>
+                <div className="lg:text-4xl text-2xl">
                     <h1 className='text-white lg:leading-65 leading-10'>
                         <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
                         <br/>
@@ -110,14 +109,14 @@ function Page() {
         <>
             <AboutMe />
 
-            <div className='sm:visible'>
-            <div className="center-obj">
-                <div className="down-arrow"></div>
-            </div>
+            <div className='hidden lg:block'>
+                <div className="center-obj">
+                    <div className="down-arrow"></div>
+                </div>
             </div>
 
 
-            <div className='bg-white lg:justify-center md:justify-center w-full lg:items-center md:items-center mt-72 flex'>
+            <div className='bg-white lg:justify-center md:justify-center w-screen lg:items-center md:items-center mt-72 flex'>
                 <h4 className='lg:m-30 lg:w-1/2 lg:m-5 m-3 lg:text-xl text-lg'>
                     Hello! My name is Ethan Mathieu and I’m a Junior at Yale majoring in Computer Science 
                     and minoring in Data Science. 
