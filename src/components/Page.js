@@ -75,30 +75,30 @@ function AboutMe() {
             <a target="_blank" href="https://www.youtube.com/watch?v=zw47_q9wbBE">
             <h2 className="opacity-5 underline">Yahaha! You found me!</h2>
             </a>
-        <button onClick={togglePlayPause} className="ml-auto">
-          {isPlaying ? <FaPause size={30} color="white" /> : <FaPlay size={30} color="white" />}
-        </button>
-        <br></br>
-        {isPlaying && <a href="https://triangle-strategy.fandom.com/wiki/Benedict_Pascal"><p className='text-white ml-3 bg-gray-700 p-2 rounded-lg opacity-90 drop-shadow-lg'>Benedict's Path</p></a>}
-      </div>
+            <button onClick={togglePlayPause} className="ml-auto">
+            {isPlaying ? <FaPause size={30} color="white" /> : <FaPlay size={30} color="white" />}
+            </button>
+            <br></br>
+            {isPlaying && <a href="https://triangle-strategy.fandom.com/wiki/Benedict_Pascal"><p className='text-white ml-3 bg-gray-700 p-2 rounded-lg opacity-90 drop-shadow-lg'>Benedict's Path</p></a>}
+        </div>
 
-            <div className='lg:m-20 m-5 font-robot w-screen font-medium'>
-                <div className="lg:text-4xl text-2xl">
-                    <h1 className='text-white lg:leading-65 leading-10'>
-                        <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
-                        <br/>
-                        I'm studying Computer & Data Science at <br/> Yale University.
-                        <br />
-                    </h1> 
-                   
-                    <div className="hidden">
-                        <YouTube videoId={videoId} opts={opts} onReady={(e) => (playerRef.current = e.target)} />
-
-                    </div>
-                    
+        <div className='lg:m-20 m-5 w-full font-medium'>
+            <div className="lg:text-4xl text-2xl">
+                <h1 className='text-white lg:leading-65 leading-10'>
+                    <span className='highlight'>My name is <span className="no-drop">Ethan Mathieu.</span></span>
+                    <br/>
+                    I'm studying Computer & Data Science at <br/> Yale University.
+                    <br />
+                </h1> 
                 
+                <div className="hidden">
+                    <YouTube videoId={videoId} opts={opts} onReady={(e) => (playerRef.current = e.target)} />
+
                 </div>
+                
+            
             </div>
+        </div>
         </>
     )
 }
@@ -106,7 +106,7 @@ function AboutMe() {
 function Page() {  
 
     return (  
-        <>
+        <div >
             <AboutMe />
 
             <div className='hidden lg:block'>
@@ -116,8 +116,8 @@ function Page() {
             </div>
 
 
-            <div className='bg-white lg:justify-center md:justify-center w-screen lg:items-center md:items-center mt-72 flex'>
-                <h4 className='lg:m-30 lg:w-1/2 lg:m-5 m-3 lg:text-xl text-lg'>
+            <div className='bg-white w-screen flex items-center justify-center mt-72'>
+                <h4 className='lg:m-30 lg:w-1/2 p-4 lg:text-xl text-lg'>
                     Hello! My name is Ethan Mathieu and I’m a Junior at Yale majoring in Computer Science 
                     and minoring in Data Science. 
                     <br/>
@@ -158,9 +158,8 @@ function Page() {
                         >
                             ymeets - yale scheduling made easy
                         </div></a>
-                    <a target="_blank" href="https://www.yalecomputersociety.org"
-                    
-                    ><div                       style={{
+                    <a target="_blank" href="https://www.yalecomputersociety.org"><div                       
+                        style={{
                         backgroundImage: `url(${YCSWebsiteImg})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
@@ -205,7 +204,7 @@ function Page() {
             <Footer/>
 
             
-        </>
+        </div>
     )
     
 }
