@@ -132,7 +132,7 @@ function Page() {
                     <br/> 
                     <br/>
                     
-                    <strong>I'm interested New Grad & Fall 2024 Software Engineering opportunties.</strong>
+                    <strong>I'm interested New Grad Software Engineering opportunties.</strong>
                  
                     <br/>
                     <br/>
