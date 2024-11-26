@@ -118,7 +118,7 @@ function Page() {
 
             <div className='bg-white w-screen flex items-center justify-center mt-72'>
                 <h4 className='lg:m-30 lg:w-1/2 p-4 lg:text-xl text-lg'>
-                    Hello! My name is Ethan Mathieu and I’m a Junior at Yale majoring in Computer Science 
+                    Hello! My name is Ethan Mathieu and I’m a Senior at Yale majoring in Computer Science 
                     and minoring in Data Science. 
                     <br/>
                     <br/>
@@ -128,12 +128,7 @@ function Page() {
                     and software gives us the capability to convert that into action and meaning.
                     
                     I've built scalable web-apps, engineered custom OS improvements and designed products. 
-                    Working with other people, though, is the best part of the job of the job for me. 
-                    <br/> 
-                    <br/>
-                    
-                    <strong>I'm interested New Grad Software Engineering opportunties.</strong>
-                 
+                    Working with other people, though, is the best part of the job of the job for me.                  
                     <br/>
                     <br/>
                     Please feel free to contact me with the socials at the bottom of my site; I always reply within
