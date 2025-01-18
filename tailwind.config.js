@@ -9,6 +9,11 @@ module.exports = {
         '65': '65px',
       },
 
+      scale: {
+        '102': '1.02',
+      },
+
+
       colors: {
         'custom-blue': '#082b4dfc'
       },

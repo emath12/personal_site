@@ -1,9 +1,7 @@
 import React from 'react';
 import {
   MDBFooter,
-  MDBContainer,
-  MDBIcon,
-  MDBBtn
+  MDBContainer
 } from 'mdb-react-ui-kit';
 
 export default function Footer() {
@@ -15,10 +13,6 @@ export default function Footer() {
         <MDBFooter className='lg:text-center' color='white' bgColor='transparent'>
         <MDBContainer className='p-4'>
  
-            <a target="_blank" href="https://www.youtube.com/watch?v=Ww5-UV_Dv_U">
-              <p className='opacity-50'><strong>"Follow your passion, and life will reward you." <br/> -Uncle Iroh, <italic>Avatar The Last Airbender</italic></strong></p>
-            </a>
-
         </MDBContainer>
         </MDBFooter>
     </div>
