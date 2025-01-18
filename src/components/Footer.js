@@ -13,6 +13,8 @@ export default function Footer() {
         <MDBFooter className='lg:text-center' color='white' bgColor='transparent'>
         <MDBContainer className='p-4'>
  
+    
+
         </MDBContainer>
         </MDBFooter>
     </div>
