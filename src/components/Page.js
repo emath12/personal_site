@@ -3,7 +3,7 @@ import '../deprecated/NavBar.js'
 import Footer from './Footer.js'
 import ymeetsimg from "../imgs/ymeets.png"
 import YCSWebsiteImg from "../imgs/ycs-website.png"
-import resumePDF from "../EthanMathieu_Feb2024Resume.pdf"
+
 import { IoIosPaper } from "react-icons/io";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
