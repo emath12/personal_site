@@ -13,6 +13,11 @@ const SONGS = [
     label: "You Say Run",
     link: "https://www.youtube.com/watch?v=iYZIUtDAFIw",
   },
+  {
+    videoId: "kzjmIpZNR-g", // Fullmetal Alchemist OST - Laws of Alchemy
+    label: "Laws of Alchemy",
+    link: "https://www.youtube.com/watch?v=kzjmIpZNR-g",
+  },
 ];
 
 // Picks a random song, avoiding `exclude` when there's another option.

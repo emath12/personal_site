@@ -98,6 +98,51 @@ a:hover {
   min-height: 100vh;
 }
 
+/* Background transmutation circle */
+
+.site > :not(.transmutation-circle) {
+  position: relative;
+  z-index: 1;
+}
+
+.transmutation-circle {
+  position: fixed;
+  bottom: -180px;
+  right: -200px;
+  width: 640px;
+  height: 640px;
+  color: var(--ink);
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+  animation: transmute 360s linear infinite;
+}
+
+@media (max-width: 600px) {
+  .transmutation-circle {
+    bottom: -110px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.tc-text {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+@keyframes transmute {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transmutation-circle {
+    animation: none;
+  }
+}
+
 /* Header */
 
 .site-header .wrapper {

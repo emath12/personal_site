@@ -1,9 +1,11 @@
 import ThemeToggle from "./ThemeToggle.tsx";
 import { MusicPlayer } from "./EasterEggs.tsx";
+import TransmutationCircle from "./TransmutationCircle.tsx";
 
 export default function Layout({ children }) {
   return (
     <div className="site">
+      <TransmutationCircle />
       <header className="site-header">
         <div className="wrapper">
           <nav className="site-nav">
