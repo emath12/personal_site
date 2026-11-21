@@ -93,20 +93,20 @@ export default function Home() {
           , Netflix's workflow engine. My main focus is cutting function
           startup latency by writing performant Go and structuring our runtime
           around native Kubernetes components. I also specialize in
-          resource and memory efficiency, and I've built tools that save
+          resource efficiency, and I've built tools that save
           millions of dollars a year in encoding costs.
         </p>
         <p>
           I graduated from Yale in 2025 with a B.S. in Computer Science with
           Honors and a certificate in Data Science. There, I did research in
           the Yale Efficient Computing Lab, was Vice President of the Yale
-          Computer Society, advised the Dean of Engineering, broadcast for Yale
-          Sports Radio, and gave campus tours.
+          Computer Society, and advised the Dean of Engineering.
         </p>
         <p>
           I mostly work in Go, Java, Python, and Rust, with Kubernetes, Docker,
-          and Kafka. Feel free to reach out, I'm{" "}
-          <a href="mailto:ethanmathieu120@gmail.com">always happy to chat</a>.
+          and Kafka. Feel free to reach out at{" "}
+          <a href="mailto:ethanmathieu120@gmail.com">ethanmathieu120@gmail.com</a>;
+          I'm always happy to chat.
         </p>
       </section>
 
