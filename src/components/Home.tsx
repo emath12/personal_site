@@ -1,32 +1,19 @@
 import Layout from "./Layout.tsx";
+import EasterEggs from "./EasterEggs.tsx";
 
-const EXPERIENCE = [
+const PRESS = [
   {
-    title: "Software Engineer, Distributed Systems",
-    org: "Netflix",
-    meta: "Aug 2025 – Present · Los Gatos, CA",
+    title: "Netflix Stratum Media Processing: Automated Container Right-Sizing",
+    link: "https://netflixtechblog.com/netflix-stratum-media-processing-automated-container-right-sizing-ddf9aa68a801",
     subtitle:
-      "Function-as-a-service platform: a Go rewrite of the runtime, cold-start latency, and the migration to native Kubernetes.",
+      "How Netflix safely downsizes containers, with the memory watcher I built as the safety net.",
+    tags: ["Netflix Tech Blog"],
   },
   {
-    title: "Software Engineer Intern, Fullstack",
-    org: "Netflix",
-    meta: "Summer 2024",
-    subtitle:
-      "Telemetry tooling (React, GraphQL, Java) giving media encoding engineers real-time visibility into pipeline runs.",
-  },
-  {
-    title: "Software Engineer Intern",
-    org: "Procter & Gamble",
-    meta: "Summer 2023",
-    subtitle:
-      "A data reconciliation tool (Next.js, FastAPI, BigQuery) for mapping millions of ad spend records.",
-  },
-  {
-    title: "Undergraduate Research Assistant",
-    org: "Yale Efficient Computing Lab",
-    meta: "Jun 2022 – Jan 2023",
-    subtitle: "Optimized transmission paths in a Rust network driver.",
+    title: "Ethan Mathieu '25: From campus apps to Netflix",
+    link: "https://engineering.yale.edu/news-and-events/news/ethan-mathieu-25-campus-apps-netflix",
+    subtitle: "A Yale Engineering profile on my path from Yale to Netflix.",
+    tags: ["Yale Engineering"],
   },
 ];
 
@@ -34,54 +21,99 @@ const PROJECTS = [
   {
     title: "ymeets",
     link: "https://ymeets.com",
-    meta: "React, TypeScript, Firebase",
     subtitle:
       "Scheduling for Yale students, built with a team of 7+ developers.",
+    tags: ["React", "TypeScript", "Firebase"],
   },
   {
     title: "Yale Computer Society website",
     link: "https://www.yalecomputersociety.org",
-    meta: "yalecomputersociety.org",
     subtitle: "The website for Yale's student computer science society.",
+    tags: ["Web"],
   },
 ];
+
+function CardList({ items }) {
+  return (
+    <div className="cards">
+      {items.map((p) => (
+        <a
+          key={p.title}
+          className="card"
+          href={p.link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h3>{p.title}</h3>
+          <p>{p.subtitle}</p>
+          <div className="tags">
+            {p.tags.map((t) => (
+              <span key={t} className="tag">
+                {t}
+              </span>
+            ))}
+          </div>
+        </a>
+      ))}
+    </div>
+  );
+}
 
 export default function Home() {
   return (
     <Layout>
-      <p className="intro">
-        Hi, I'm Ethan. I'm a software engineer on distributed systems at
-        Netflix, working on our function-as-a-service platform.
-      </p>
+      <EasterEggs />
+      <section className="hero">
+        <h1>Ethan Mathieu</h1>
+        <p>
+          Software engineer at <strong>Netflix</strong> · Yale CS '25
+        </p>
+        <div className="pills">
+          <a className="pill" href="mailto:ethanmathieu120@gmail.com">
+            Email
+          </a>
+          <a className="pill" href="https://github.com/emath12">
+            GitHub
+          </a>
+          <a className="pill" href="https://www.linkedin.com/in/ethan-mathieu/">
+            LinkedIn
+          </a>
+        </div>
+      </section>
 
-      <h2 className="section-heading">Experience</h2>
-      <ul className="entry-list">
-        {EXPERIENCE.map((e) => (
-          <li key={e.title + e.org}>
-            <span className="entry-meta">{e.meta}</span>
-            <h3 className="entry-link">
-              {e.title}, {e.org}
-            </h3>
-            <p className="entry-subtitle">{e.subtitle}</p>
-          </li>
-        ))}
-      </ul>
+      <section className="bio">
+        <p>Hello, I'm Ethan.</p>
+        <p>
+          I'm a distributed systems engineer at Netflix. My team owns
+          the function-as-a-service platform behind media processing, as well as the
+          distributed queue behind high-traffic workflow engines like{" "}
+          <a href="https://netflixtechblog.com/netflix-conductor-a-microservices-orchestrator-2e8d4771bf40">
+            Conductor
+          </a>
+          . My main focus is cutting function startup latency, through
+          performant Go and native Kubernetes components. I also specialize in
+          resource and memory efficiency, and I've built tools that save
+          millions of dollars a year in encoding costs.
+        </p>
+        <p>
+          I graduated from Yale in 2025 with a B.S. in Computer Science with
+          Honors and a certificate in Data Science. There, I did research in
+          the Yale Efficient Computing Lab, was Vice President of the Yale
+          Computer Society, advised the Dean of Engineering, broadcast for Yale
+          Sports Radio, and gave campus tours.
+        </p>
+        <p>
+          I mostly work in Go, Java, Python, and Rust, with Kubernetes, Docker,
+          and Kafka. Feel free to reach out at{" "}
+          <a href="mailto:ethanmathieu120@gmail.com">ethanmathieu120@gmail.com</a>.
+        </p>
+      </section>
+
+      <h2 className="section-heading">Writing &amp; press</h2>
+      <CardList items={PRESS} />
 
       <h2 className="section-heading">Projects</h2>
-      <ul className="entry-list">
-        {PROJECTS.map((p) => (
-          <li key={p.title}>
-            <span className="entry-meta">{p.meta}</span>
-            <a className="entry-link" href={p.link} target="_blank" rel="noreferrer">
-              {p.title}
-            </a>
-            <p className="entry-subtitle">{p.subtitle}</p>
-          </li>
-        ))}
-      </ul>
-      <p>
-        More on <a href="https://github.com/emath12">GitHub</a>.
-      </p>
+      <CardList items={PROJECTS} />
     </Layout>
   );
 }
