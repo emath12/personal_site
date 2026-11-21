@@ -104,8 +104,8 @@ export default function Home() {
         </p>
         <p>
           I mostly work in Go, Java, Python, and Rust, with Kubernetes, Docker,
-          and Kafka. Feel free to reach out at{" "}
-          <a href="mailto:ethanmathieu120@gmail.com">ethanmathieu120@gmail.com</a>.
+          and Kafka. Feel free to reach out, I'm{" "}
+          <a href="mailto:ethanmathieu120@gmail.com">always happy to chat</a>.
         </p>
       </section>
 
