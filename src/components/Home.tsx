@@ -66,7 +66,7 @@ export default function Home() {
       <section className="hero">
         <h1>Ethan Mathieu</h1>
         <p>
-          Software engineer at <strong>Netflix</strong> · Yale CS '25
+          Distributed Systems Engineer at <strong>Netflix</strong> · Yale CS '25
         </p>
         <div className="pills">
           <a className="pill" href="mailto:ethanmathieu120@gmail.com">
