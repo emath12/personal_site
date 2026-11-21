@@ -86,12 +86,13 @@ export default function Home() {
         <p>
           I'm a distributed systems engineer at Netflix. My team owns
           the function-as-a-service platform behind media processing, as well as the
-          distributed queue behind high-traffic workflow engines like{" "}
+          distributed queue behind{" "}
           <a href="https://netflixtechblog.com/netflix-conductor-a-microservices-orchestrator-2e8d4771bf40">
             Conductor
           </a>
-          . My main focus is cutting function startup latency, through
-          performant Go and native Kubernetes components. I also specialize in
+          , Netflix's workflow engine. My main focus is cutting function
+          startup latency by writing performant Go and structuring our runtime
+          around native Kubernetes components. I also specialize in
           resource and memory efficiency, and I've built tools that save
           millions of dollars a year in encoding costs.
         </p>
