@@ -1,5 +1,6 @@
 import Layout from "./Layout.tsx";
-import EasterEggs from "./EasterEggs.tsx";
+import Yahaha from "./EasterEggs.tsx";
+import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 
 const PRESS = [
   {
@@ -14,6 +15,24 @@ const PRESS = [
     link: "https://engineering.yale.edu/news-and-events/news/ethan-mathieu-25-campus-apps-netflix",
     subtitle: "A Yale Engineering profile on my path from Yale to Netflix.",
     tags: ["Yale Engineering"],
+  },
+];
+
+const READING = [
+  {
+    kind: "Tech",
+    title: "Designing Data-Intensive Applications (2nd ed.)",
+    author: "Martin Kleppmann & Chris Riccomini",
+  },
+  {
+    kind: "Fiction",
+    title: "Babel",
+    author: "R. F. Kuang",
+  },
+  {
+    kind: "Non-fiction",
+    title: "Liberty or Death: The French Revolution",
+    author: "Peter McPhee",
   },
 ];
 
@@ -62,24 +81,40 @@ function CardList({ items }) {
 export default function Home() {
   return (
     <Layout>
-      <EasterEggs />
-      <section className="hero">
-        <h1>Ethan Mathieu</h1>
-        <p>
-          Distributed Systems Engineer at <strong>Netflix</strong> · Yale CS '25
-        </p>
-        <div className="pills">
-          <a className="pill" href="mailto:ethanmathieu120@gmail.com">
-            Email
-          </a>
-          <a className="pill" href="https://github.com/emath12">
-            GitHub
-          </a>
-          <a className="pill" href="https://www.linkedin.com/in/ethan-mathieu/">
-            LinkedIn
-          </a>
-        </div>
-      </section>
+      <div className="top">
+        <Yahaha />
+        <section className="hero">
+          <h1>Ethan Mathieu</h1>
+          <p>
+            Distributed Systems Engineer at <strong>Netflix</strong> · Yale CS '25
+          </p>
+          <div className="socials">
+            <a href="mailto:ethanmathieu120@gmail.com" aria-label="Email" title="Email">
+              <FiMail size={20} />
+            </a>
+            <a href="https://github.com/emath12" aria-label="GitHub" title="GitHub">
+              <FiGithub size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ethan-mathieu/"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+            >
+              <FiLinkedin size={20} />
+            </a>
+          </div>
+        </section>
+        <details className="now-reading">
+          <summary>Currently reading</summary>
+          <ul>
+            {READING.map((b) => (
+              <li key={b.title} title={`${b.title} by ${b.author}`}>
+                <span className="book-kind">{b.kind}</span> {b.title}
+              </li>
+            ))}
+          </ul>
+        </details>
+      </div>
 
       <section className="bio">
         <p>Hello, I'm Ethan.</p>
@@ -103,14 +138,14 @@ export default function Home() {
           Computer Society, and advised the Dean of Engineering.
         </p>
         <p>
-          I mostly work in Go, Java, Python, and Rust, with Kubernetes, Docker,
+          I mostly work in Go, Java, and Python, with Kubernetes, Docker,
           and Kafka. Feel free to reach out at{" "}
           <a href="mailto:ethanmathieu120@gmail.com">ethanmathieu120@gmail.com</a>;
           I'm always happy to chat.
         </p>
       </section>
 
-      <h2 className="section-heading">Writing &amp; press</h2>
+      <h2 className="section-heading">Writing</h2>
       <CardList items={PRESS} />
 
       <h2 className="section-heading">Projects</h2>

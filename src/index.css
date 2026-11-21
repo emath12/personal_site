@@ -110,7 +110,8 @@ a:hover {
 
 .site-nav {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 14px;
 }
 
 /* Content */
@@ -146,8 +147,9 @@ a:hover {
 .play-button {
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
+  margin: -5px 0; /* don't make the header taller than the theme icon */
   border: 1px solid var(--line);
   border-radius: 50%;
   background: transparent;
@@ -182,11 +184,20 @@ a:hover {
   font-weight: 500;
 }
 
-.pills {
+.socials {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 18px;
   margin-top: 16px;
+}
+
+.socials a {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.socials a:hover {
+  color: var(--accent);
 }
 
 .pill {
@@ -215,6 +226,94 @@ a:hover {
   margin-top: 36px;
   font-size: 17px;
   line-height: 1.7;
+}
+
+/* Currently reading: a small toggle in the top right that opens a card over
+   the page, so it never shifts the layout. On phones the toggle sits at the
+   end of the social icons row. */
+
+.top {
+  position: relative;
+}
+
+.now-reading {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (min-width: 720px) {
+  .now-reading {
+    top: 6px;
+    bottom: auto;
+  }
+}
+
+.now-reading summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.now-reading summary::-webkit-details-marker {
+  display: none;
+}
+
+.now-reading summary::after {
+  content: "▾";
+  font-size: 11px;
+  transition: transform 0.15s;
+}
+
+.now-reading[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.now-reading summary:hover,
+.now-reading[open] summary {
+  color: var(--ink);
+  border-color: var(--muted);
+}
+
+.now-reading ul {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: min(260px, calc(100vw - 32px));
+  margin: 0;
+  padding: 10px 14px;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.35);
+}
+
+.now-reading li + li {
+  margin-top: 6px;
+}
+
+.book-kind {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 /* Cards */

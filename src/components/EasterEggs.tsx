@@ -23,7 +23,22 @@ function randomSong(exclude?: number) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-export default function EasterEggs() {
+export default function Yahaha() {
+  return (
+    <div className="eggs">
+      <a
+        className="yahaha"
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.youtube.com/watch?v=zw47_q9wbBE"
+      >
+        Yahaha! You found me!
+      </a>
+    </div>
+  );
+}
+
+export function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [current, setCurrent] = useState(() => randomSong());
   const playerRef = useRef<any>(null);
@@ -52,30 +67,19 @@ export default function EasterEggs() {
   const song = SONGS[current];
 
   return (
-    <div className="eggs">
-      <a
-        className="yahaha"
-        target="_blank"
-        rel="noreferrer"
-        href="https://www.youtube.com/watch?v=zw47_q9wbBE"
+    <div className="eggs-player">
+      {isPlaying && (
+        <a className="pill" target="_blank" rel="noreferrer" href={song.link}>
+          {song.label}
+        </a>
+      )}
+      <button
+        className="play-button"
+        onClick={togglePlayPause}
+        aria-label={isPlaying ? "Pause" : "Play"}
       >
-        Yahaha! You found me!
-      </a>
-
-      <div className="eggs-player">
-        {isPlaying && (
-          <a className="pill" target="_blank" rel="noreferrer" href={song.link}>
-            {song.label}
-          </a>
-        )}
-        <button
-          className="play-button"
-          onClick={togglePlayPause}
-          aria-label={isPlaying ? "Pause" : "Play"}
-        >
-          {isPlaying ? <FaPause size={14} /> : <FaPlay size={14} />}
-        </button>
-      </div>
+        {isPlaying ? <FaPause size={12} /> : <FaPlay size={12} />}
+      </button>
 
       <div style={{ display: "none" }}>
         <YouTube

@@ -1,4 +1,5 @@
 import ThemeToggle from "./ThemeToggle.tsx";
+import { MusicPlayer } from "./EasterEggs.tsx";
 
 export default function Layout({ children }) {
   return (
@@ -6,6 +7,7 @@ export default function Layout({ children }) {
       <header className="site-header">
         <div className="wrapper">
           <nav className="site-nav">
+            <MusicPlayer />
             <ThemeToggle />
           </nav>
         </div>
